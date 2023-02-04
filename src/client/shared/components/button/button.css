@@ -1,0 +1,28 @@
+.button {
+    border-radius: 4px;
+    background: var(--black);
+    border: 1px solid var(--black);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.button_variant_outlined {
+    background: none;
+    border: 1px solid #EAEAEA;
+    color: var(--black);
+}
+
+.button_size_sm {
+    padding: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+}

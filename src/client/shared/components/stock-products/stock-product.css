@@ -1,0 +1,28 @@
+.stock-products {
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px;
+}
+
+.stock-products__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.stock-products__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 32px;
+    color: black;
+    margin: 0;
+}
+
+.stock-products__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px 8px;
+}

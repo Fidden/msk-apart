@@ -1,0 +1,35 @@
+.double-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    max-width: 233px;
+}
+
+.double-input__input {
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.double-input__input::placeholder {
+    color: #A8AAB6;
+}
+
+.double-input__input::-webkit-inner-spin-button, .double-input__input::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.double-input__decimetre {
+    height: 80%;
+    background: #A8AAB6;
+    width: 1px;
+}

@@ -1,0 +1,6 @@
+.page-layout {
+    max-width: var(--xl);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}

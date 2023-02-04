@@ -1,6 +1,27 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "./src/@types/.eslintrc-auto-import.json"
-  ]
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "semi": [
+      2,
+      "always"
+    ],
+    "react/jsx-first-prop-new-line": [
+      2,
+      "multiline"
+    ],
+    "react/react-in-jsx-scope": "off",
+    "brace-style": "error",
+    "curly": [
+      "error",
+      "all"
+    ]
+  }
 }

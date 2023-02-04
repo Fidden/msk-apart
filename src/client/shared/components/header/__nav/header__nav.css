@@ -1,0 +1,15 @@
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-inline: auto;
+    gap: 16px;
+}
+
+.header__nav-item {
+    color: var(--black);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+}

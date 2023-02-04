@@ -1,6 +1,7 @@
 import {IClassNameProps} from '@bem-react/core';
 import {FC, ReactNode} from 'react';
-import {cnPageLayout} from '~/client/shared/layouts/page-layout/page-layout.const';
+import {Header} from '~/client/shared/components/header/header';
+import {cnPageLayout} from './page-layout.const';
 
 export interface IPageLayoutProps extends IClassNameProps {
     children: ReactNode;
@@ -9,6 +10,7 @@ export interface IPageLayoutProps extends IClassNameProps {
 export const PageLayout: FC<IPageLayoutProps> = ({children, className}) => {
     return (
         <div className={cnPageLayout.mix(className)}>
+            <Header/>
             {children}
         </div>
     );
