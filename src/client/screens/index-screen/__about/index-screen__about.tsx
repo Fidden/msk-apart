@@ -2,7 +2,11 @@ import Image from 'next/image';
 import {FC} from 'react';
 import {cnIndexScreen} from '../index-screen.const';
 import AboutImage from './assets/about-image.png';
+import AlfaLogo from './assets/alfa.svg';
+import MegafonLogo from './assets/megafone.svg';
+import OtkritiyeLogo from './assets/otkritie.svg';
 import SberLogo from './assets/sber.svg';
+import VtbLogo from './assets/vtb.svg';
 import './index-screen__about.css';
 
 export const IndexScreenAbout: FC = () => {
@@ -22,11 +26,13 @@ export const IndexScreenAbout: FC = () => {
                         Мы полностью берем на себя все рекламные, организационные и юридические вопросы, связанные с
                         продажей/покупкой вашей квартиры (рекламу на всех площадках за наш счет), организацию
                         показов/просмотров, ведение переговоров с контрагентами (продавцами, риэлторами, нотариусами,
-                        регистраторами, ипотечными брокерами и пр.), избавим вас от пустых и типовых разговоров, в том числе
+                        регистраторами, ипотечными брокерами и пр.), избавим вас от пустых и типовых разговоров, в том
+                        числе
                         звонков агентов по недвижимости и в кратчайшее время безопасно проведем сделку.
                     </p>
                     <p className={cnIndexScreen('about-text')}>
-                        Мы создаем максимально комфортные условия для нашего клиента, полностью информируя обо всех этапах
+                        Мы создаем максимально комфортные условия для нашего клиента, полностью информируя обо всех
+                        этапах
                         нашей работы, у нас есть собственная база клиентов (продавцов/покупателей) — продадим Объект
                         в кратчайшие сроки и по хорошей цене.)
                     </p>
@@ -62,20 +68,26 @@ export const IndexScreenAbout: FC = () => {
                     </li>
                     <li className={cnIndexScreen('about-partners-block')}>
                         <Image
-                            src={SberLogo}
-                            alt={'sber'}
+                            src={VtbLogo}
+                            alt={'vtb'}
                         />
                     </li>
                     <li className={cnIndexScreen('about-partners-block')}>
                         <Image
-                            src={SberLogo}
-                            alt={'sber'}
+                            src={OtkritiyeLogo}
+                            alt={'otkritie'}
                         />
                     </li>
                     <li className={cnIndexScreen('about-partners-block')}>
                         <Image
-                            src={SberLogo}
-                            alt={'sber'}
+                            src={AlfaLogo}
+                            alt={'alfa'}
+                        />
+                    </li>
+                    <li className={cnIndexScreen('about-partners-block')}>
+                        <Image
+                            src={MegafonLogo}
+                            alt={'megafon'}
                         />
                     </li>
                 </ul>

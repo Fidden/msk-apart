@@ -1,6 +1,7 @@
 import React from 'react';
 import {IndexScreenAbout} from '~/client/screens/index-screen/__about/index-screen__about';
 import {IndexScreenAdvantage} from '~/client/screens/index-screen/__advantage/index-screen__advantage';
+import {IndexScreenConsult} from '~/client/screens/index-screen/__consult/index-screen__consult';
 import {IndexScreenCount} from '~/client/screens/index-screen/__count/index-screen__count';
 import {StockProduct} from '~/client/shared/components/stock-products/stock-product';
 import {PageLayout} from '~/client/shared/layouts/page-layout/page-layout';
@@ -194,6 +195,7 @@ export const IndexScreen: Screen = () => {
                 count={count}
             />
             <IndexScreenAbout/>
+            <IndexScreenConsult/>
         </PageLayout>
     );
 };

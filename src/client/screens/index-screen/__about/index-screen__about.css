@@ -4,6 +4,7 @@
     border: 1px solid #EAEAEA;
     border-radius: 4px;
     padding: 16px;
+    margin-top: 56px;
 }
 
 .index-screen__about-container {
@@ -101,7 +102,11 @@
 }
 
 .index-screen__about-partners-block {
-    padding: 8px;
+    padding: 0 16px;
     border: 1px solid #EAEAEA;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 73px;
 }
