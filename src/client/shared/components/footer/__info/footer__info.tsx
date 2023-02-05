@@ -9,7 +9,8 @@ export const FooterInfo: FC = () => (
     <section className={cnFooter('info')}>
         <Link
             className={cnFooter('info-logo')}
-            href={'/'}>
+            href={'/'}
+        >
             <Image
                 src={FooterLogoImage}
                 alt={'msk-apart'}

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {FC} from 'react';
 import {cnFooter} from '../footer.const';
 import './footer__nav.css';
+
 export interface INavRoute {
     title: string;
     href: string;

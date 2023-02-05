@@ -15,7 +15,10 @@ export const FooterSocials: FC = () => (
             rel="noreferrer"
             className={cnFooter('socials-item')}
         >
-            <Image src={TelegramIcon} alt={'telegram'}/>
+            <Image
+                src={TelegramIcon}
+                alt={'telegram'}
+            />
         </a>
         <a
             href="https://www.instagram.com/"
@@ -23,7 +26,10 @@ export const FooterSocials: FC = () => (
             rel="noreferrer"
             className={cnFooter('socials-item')}
         >
-            <Image src={VKIcon} alt={'vk'}/>
+            <Image
+                src={VKIcon}
+                alt={'vk'}
+            />
         </a>
         <a
             href="https://www.youtube.com/"
@@ -31,7 +37,10 @@ export const FooterSocials: FC = () => (
             rel="noreferrer"
             className={cnFooter('socials-item')}
         >
-            <Image src={DzenIcon} alt={'dzen'}/>
+            <Image
+                src={DzenIcon}
+                alt={'dzen'}
+            />
         </a>
         <a
             href="https://www.youtube.com/"
@@ -39,7 +48,10 @@ export const FooterSocials: FC = () => (
             rel="noreferrer"
             className={cnFooter('socials-item')}
         >
-            <Image src={YoutubeIcon} alt={'youtube'}/>
+            <Image
+                src={YoutubeIcon}
+                alt={'youtube'}
+            />
         </a>
     </div>
 );

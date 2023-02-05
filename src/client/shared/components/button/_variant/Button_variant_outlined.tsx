@@ -8,6 +8,6 @@ interface IButtonVariantOutlineProps {
 
 export const withButtonVariantOutlined = withBemMod<IButtonVariantOutlineProps, IButtonProps>(
     cnButton(),
-    { variant: 'outlined' },
-    (Button) => (props) => <Button {...props}/>,
+    {variant: 'outlined'},
+    (Button) => (props) => <Button {...props}/>
 );

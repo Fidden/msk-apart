@@ -8,7 +8,10 @@ export const FooterContact: FC = () => (
         <p className={cnFooter('contact-title')}>
             Узнавайте о новых предложениях первыми!
         </p>
-        <Input type={'email'} placeholder={'Введите Email'}/>
+        <Input
+            type={'email'}
+            placeholder={'Введите Email'}
+        />
         <p className={cnFooter('contact-made')}>
             Made in Merga
         </p>

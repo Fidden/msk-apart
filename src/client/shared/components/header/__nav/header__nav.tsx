@@ -7,19 +7,32 @@ export const HeaderNav: FC = () => (
     <nav className={cnHeader('nav')}>
         <Link
             className={cnHeader('nav-item')}
-            href={'/'}>
+            href={'/'}
+        >
             Первичное жильё
         </Link>
-        <Link className={cnHeader('nav-item')} href={'/'}>
+        <Link
+            className={cnHeader('nav-item')}
+            href={'/'}
+        >
             Каталог
         </Link>
-        <Link className={cnHeader('nav-item')} href={'/'}>
+        <Link
+            className={cnHeader('nav-item')}
+            href={'/'}
+        >
             Услуги
         </Link>
-        <Link className={cnHeader('nav-item')} href={'/'}>
+        <Link
+            className={cnHeader('nav-item')}
+            href={'/'}
+        >
             Контакты
         </Link>
-        <Link className={cnHeader('nav-item')} href={'/'}>
+        <Link
+            className={cnHeader('nav-item')}
+            href={'/'}
+        >
             Вопросы и ответы
         </Link>
     </nav>

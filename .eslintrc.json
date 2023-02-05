@@ -5,6 +5,9 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
+  "plugins": [
+    "react"
+  ],
   "rules": {
     "@typescript-eslint/no-explicit-any": "off",
     "react/prop-types": "off",
@@ -17,6 +20,16 @@
     "react/jsx-first-prop-new-line": [
       2,
       "multiline"
+    ],
+    "react/jsx-max-props-per-line": [
+      2,
+      {
+        "maximum": 1
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      2,
+      "tag-aligned"
     ],
     "react/react-in-jsx-scope": "off",
     "brace-style": "error",

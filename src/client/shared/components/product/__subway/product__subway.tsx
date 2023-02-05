@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import {FC} from 'react';
+import {IProduct} from '~/client/shared/types/product';
 import SubwayIcon from '../assets/subway.svg';
 import WalkIcon from '../assets/walk.svg';
 import {cnProduct} from '../product.const';
-import {IProduct} from '~/client/shared/types/product';
 import './product__subway.css';
 
 type IProductSubwayProps = Pick<IProduct, 'subway'>;

@@ -9,14 +9,23 @@ import './header__controls.css';
 export const HeaderControls: FC = () => (
     <div className={cnHeader('controls')}>
         <div className={cnHeader('controls-item')}>
-            <Image src={SearchIcon} alt={'search'}/>
+            <Image
+                src={SearchIcon}
+                alt={'search'}
+            />
         </div>
         <div className={cnHeader('controls-item')}>
-            <Image src={HeartIcon} alt={'like'}/>
+            <Image
+                src={HeartIcon}
+                alt={'like'}
+            />
         </div>
         <button className={cnHeader('controls-auth')}>
             Войти
-            <Image src={EnterIcon} alt={'enter'}/>
+            <Image
+                src={EnterIcon}
+                alt={'enter'}
+            />
         </button>
     </div>
 );

@@ -34,7 +34,8 @@ export const IndexScreenConsult: FC = () => {
                 </Label>
                 <Label
                     className={cnIndexScreen('consult-form-label-wide')}
-                    text={'Что вас интересует?'}>
+                    text={'Что вас интересует?'}
+                >
                     <Input
                         type={'text'}
                         placeholder={'Опишите в двух словах'}
