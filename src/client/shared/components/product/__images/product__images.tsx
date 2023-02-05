@@ -18,7 +18,7 @@ export const ProductImages: FC<IProductImagesProps> = ({images, image}) => (
                     key={src}
                     src={src}
                     alt={'image'}
-                    area-hidden
+                    aria-hidden
                 />)
             }
         </div>
@@ -26,7 +26,7 @@ export const ProductImages: FC<IProductImagesProps> = ({images, image}) => (
             className={cnProduct('images-main')}
             src={image}
             alt={'main-image'}
-            area-hidden
+            aria-hidden
             fill
         />
     </div>
