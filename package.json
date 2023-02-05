@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 6006 -c .storybook",
+    "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
@@ -57,6 +57,7 @@
     "eslint-plugin-storybook": "^0.6.10",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
+    "storybook-addon-next": "^1.7.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "webpack": "^5.75.0"
   }

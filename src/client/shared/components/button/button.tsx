@@ -1,7 +1,7 @@
 import {compose, IClassNameProps} from '@bem-react/core';
 import {FC, PropsWithChildren} from 'react';
-import {withButtonSizeSmall} from '~/client/shared/components/button/_size/Button_size_small';
-import {withButtonVariantOutlined} from '~/client/shared/components/button/_variant/Button_variant_outlined';
+import {withButtonSizeSmall} from './_size/Button_size_small';
+import {withButtonVariantOutlined} from './_variant/Button_variant_outlined';
 import {cnButton} from './button.const';
 
 export interface IButtonProps extends PropsWithChildren, IClassNameProps {

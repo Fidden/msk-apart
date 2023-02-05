@@ -1,5 +1,5 @@
 import {withBemMod} from '@bem-react/core';
-import {cnButton} from '~/client/shared/components/button/button.const';
+import {cnButton} from '../button.const';
 import {IButtonProps} from '../button';
 
 interface IButtonSizeSmallProps {

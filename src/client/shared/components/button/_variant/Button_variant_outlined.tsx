@@ -1,6 +1,7 @@
 import {withBemMod} from '@bem-react/core';
-import {cnButton} from '~/client/shared/components/button/button.const';
 import {IButtonProps} from '../button';
+import {cnButton} from '../button.const';
+
 
 interface IButtonVariantOutlineProps {
     variant?: 'outlined';
