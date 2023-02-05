@@ -3,6 +3,15 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    padding: 16px 0;
+    padding: 16px;
     margin: 8px 0;
+    background: rgba(255, 255, 255, 0.41);
+    backdrop-filter: blur(17.5px);
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    max-width: var(--xl);
+    border-radius: 4px;
+    z-index: 1000;
 }
