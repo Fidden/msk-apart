@@ -1,4 +1,5 @@
 import {FC} from 'react';
+import {Breadcrumb} from '~/client/shared/components/breadcrumb/breadcrumb';
 import {Product} from '~/client/shared/components/product/product';
 import {Select} from '~/client/shared/components/select/select';
 import {PageLayout} from '~/client/shared/layouts/page-layout/page-layout';
@@ -167,10 +168,17 @@ const products: IProduct[] = [
         }
     }
 ];
+const breadcrumbRoutes = [
+    {title: 'Купить', href: '/'},
+    {title: 'Квартиру', href: '/'},
+    {title: '1,2 Комнаты', href: '/'},
+    {title: 'Тверская', href: '/'}
+];
 
 export const CatalogScreen: FC = () => {
     return (
         <PageLayout>
+            <Breadcrumb routes={breadcrumbRoutes}/>
             <section className={cnCatalogScreen()}>
                 <aside className={cnCatalogScreen('filter')}>
                     <div className={cnCatalogScreen('filter-block')}>
