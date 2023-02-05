@@ -1,6 +1,8 @@
 .product {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-decoration: none;
-    gap: 8px;
+    gap: 16px;
+    width: 100%;
+    position: relative;
 }

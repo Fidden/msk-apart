@@ -13,6 +13,7 @@ export const ProductImages: FC<IProductImagesProps> = ({images, image}) => (
         <div className={cnProduct('images-bar')}>
             {images.map(src =>
                 <Image
+                    className={cnProduct('images-bar-item')}
                     width={106}
                     height={61}
                     key={src}
@@ -27,7 +28,8 @@ export const ProductImages: FC<IProductImagesProps> = ({images, image}) => (
             src={image}
             alt={'main-image'}
             aria-hidden
-            fill
+            width={324}
+            height={200}
         />
     </div>
 );
