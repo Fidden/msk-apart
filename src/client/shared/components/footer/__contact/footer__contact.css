@@ -1,0 +1,22 @@
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    max-width: 224px;
+}
+
+.footer__contact-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--black);
+    margin: 0;
+}
+
+.footer__contact-made {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--black);
+    margin: 0;
+}

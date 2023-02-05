@@ -1,0 +1,15 @@
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px 4px 0 0;
+    padding: 16px;
+}
+
+.footer__container-body {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #EAEAEA;
+    justify-content: space-between;
+}
