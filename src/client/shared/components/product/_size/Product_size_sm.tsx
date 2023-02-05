@@ -1,6 +1,6 @@
 import {withBemMod} from '@bem-react/core';
-import {cnButton} from '~/client/shared/components/button/button.const';
-import {IProductProps} from '~/client/shared/components/product/product';
+import {IProductProps} from '../product';
+import {cnProduct} from '../product.const';
 import './product_size_sm.css';
 
 interface IProductSizeSmallProps {
@@ -8,7 +8,7 @@ interface IProductSizeSmallProps {
 }
 
 export const withProductSizeSmall = withBemMod<IProductSizeSmallProps, IProductProps>(
-    cnButton(),
+    cnProduct(),
     {size: 'sm'},
     (Product) => (props) => <Product {...props}/>
 );

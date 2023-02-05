@@ -22,6 +22,7 @@ export const StockProduct: FC<IStockProducts> = ({products}) => {
             <div className={cnStockProducts('body')}>
                 {products.map(product =>
                     <Product
+                        size={'sm'}
                         key={product.id}
                         product={product}
                     />

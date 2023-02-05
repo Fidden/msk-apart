@@ -20,10 +20,10 @@ export interface IProductProps extends IClassNameProps {
     product: IProduct;
 }
 
-const ProductPresenter: FC<IProductProps> = ({product}) => {
+const ProductPresenter: FC<IProductProps> = ({product, className}) => {
     return (
         <Link
-            className={cnProduct()}
+            className={cnProduct.mix(className)}
             href={`/product/${product.id}`}
         >
             <ProductImages

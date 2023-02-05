@@ -1,23 +1,28 @@
-.product {
+.product_size_sm {
     flex-direction: column;
     gap: 8px;
 }
 
-.product__images-bar, .product__description, .product__area, .product__address, .product__body-footer {
+/* Kill me */
+.product_size_sm .product__images-bar,
+.product_size_sm .product__description,
+.product_size_sm .product__area,
+.product_size_sm .product__address,
+.product_size_sm .product__body-footer {
     display: none;
 }
 
-.product__price {
+.product_size_sm .product__price {
     position: unset;
     order: -1;
     align-items: flex-start;
 }
 
-.product__price-per {
+.product_size_sm .product__price-per {
     display: none;
 }
 
-.product__info {
+.product_size_sm .product__info {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
