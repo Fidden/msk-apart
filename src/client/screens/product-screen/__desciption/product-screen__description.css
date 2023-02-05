@@ -1,0 +1,20 @@
+.product-screen__description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    max-width: 656px;
+}
+
+.product-screen__description-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 32px;
+    color: black;
+}
+
+.product-screen__description-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}

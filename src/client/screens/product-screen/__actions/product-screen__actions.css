@@ -1,0 +1,11 @@
+.product-screen__actions {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.product-screen__actions button {
+    flex: 1;
+    white-space: nowrap;
+}

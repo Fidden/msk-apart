@@ -1,0 +1,7 @@
+.product-screen__content {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    max-width: 427px;
+    flex: 1;
+}
