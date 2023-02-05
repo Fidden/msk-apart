@@ -36,7 +36,7 @@ export const Select: FC<ISelectProps> & { Option: FC<ISelectOptionProps> } = (pr
     );
 };
 
-Select.Option = function Option(props) {
+Select.Option = (props) => {
     return (
         <Listbox.Option
             {...props}
