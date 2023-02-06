@@ -1,0 +1,21 @@
+.favorites-screen {
+    display: flex;
+    flex-direction: column;
+    max-width: 1068px;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+
+.favorites-screen__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0 0 24px 0;
+    color: black;
+}
+
+.favorites-screen__body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}

@@ -1,0 +1,34 @@
+.empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+    padding: 122px 0;
+}
+
+.empty__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 32px;
+    color: var(--black);
+}
+
+.empty__illustration {
+    padding-top: 16px;
+}
+
+.empty__link {
+    margin: 8px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--black);
+    text-decoration: none;
+}
