@@ -1,6 +1,6 @@
 import {FC, useState} from 'react';
 import {cnFavoritesScreen} from '~/client/screens/favorites-screen/favorites-screen.const';
-import {Empty} from '~/client/shared/components/__empty/empty';
+import {Empty} from '~/client/shared/components/empty/empty';
 import {Product} from '~/client/shared/components/product/product';
 import {StockProduct} from '~/client/shared/components/stock-products/stock-product';
 import {PageLayout} from '~/client/shared/layouts/page-layout/page-layout';
