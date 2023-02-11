@@ -11,7 +11,7 @@ const navRoutes = [
     [
         {
             title: 'Карьера',
-            href: '/'
+            href: '/career'
         },
         {
             title: 'Первичное жильё',
