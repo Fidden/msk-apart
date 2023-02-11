@@ -13,25 +13,25 @@ export const HeaderNav: FC = () => (
         </Link>
         <Link
             className={cnHeader('nav-item')}
-            href={'/'}
+            href={'/catalog'}
         >
             Каталог
         </Link>
         <Link
             className={cnHeader('nav-item')}
-            href={'/'}
+            href={'/services'}
         >
             Услуги
         </Link>
         <Link
             className={cnHeader('nav-item')}
-            href={'/'}
+            href={'/contacts'}
         >
             Контакты
         </Link>
         <Link
             className={cnHeader('nav-item')}
-            href={'/'}
+            href={'/faq'}
         >
             Вопросы и ответы
         </Link>

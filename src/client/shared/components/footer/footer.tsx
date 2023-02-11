@@ -19,11 +19,11 @@ const navRoutes = [
         },
         {
             title: 'Услуги',
-            href: '/'
+            href: '/services'
         },
         {
             title: 'Избранное',
-            href: '/'
+            href: '/favorites'
         }
     ],
     [
@@ -37,11 +37,11 @@ const navRoutes = [
         },
         {
             title: 'Вопросы и ответы',
-            href: '/'
+            href: '/faq'
         },
         {
             title: 'Личный кабинет',
-            href: '/'
+            href: '/profile'
         }
     ]
 ];
