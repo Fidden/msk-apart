@@ -1,0 +1,42 @@
+.feedback-form {
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    padding: 16px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.feedback-form__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 32px;
+    color: var(--black);
+    margin: 0;
+}
+
+.feedback-form__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    color: #999999;
+    padding-bottom: 8px;
+}
+
+.feedback-form__form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 8px;
+    flex: 1;
+}
+
+.feedback-form__info {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999999;
+    margin: 8px 0 0 0;
+}

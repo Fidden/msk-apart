@@ -1,15 +1,13 @@
-import React, {FC} from 'react';
+import {FC} from 'react';
 import {Button} from '~/client/shared/components/button/button';
 import {FeedbackForm} from '~/client/shared/components/feedback-form/feedback-form';
 import {Input} from '~/client/shared/components/input/input';
 import {Label} from '~/client/shared/components/label/label';
-import {cnIndexScreen} from '../index-screen.const';
-import './index-screen__consult.css';
 
-export const IndexScreenConsult: FC = () => {
+export const ServicesScreenForm: FC = () => {
     return (
         <FeedbackForm
-            title={'Консультируем бесплатно'}
+            title={'Обратная связь'}
             subtitle={'Оставьте заявку на консультацию и мы перезвоним в удобное для Вас время'}
             infoText={'Нажимая “Оставить заявку”, Вы соглашаетесь с политикой обработки персональных данных.'}
         >
@@ -28,15 +26,6 @@ export const IndexScreenConsult: FC = () => {
             <Label text={'Выберите дату и время'}>
                 <Input
                     type={'datetime-local'}
-                />
-            </Label>
-            <Label
-                className={cnIndexScreen('consult-form-label-wide')}
-                text={'Что вас интересует?'}
-            >
-                <Input
-                    type={'text'}
-                    placeholder={'Опишите в двух словах'}
                 />
             </Label>
             <Button>
