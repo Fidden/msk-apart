@@ -1,0 +1,4 @@
+.disclosure {
+    display: flex;
+    flex-direction: column;
+}

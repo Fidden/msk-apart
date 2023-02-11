@@ -1,0 +1,36 @@
+.disclosure__panel {
+    margin: 0;
+    padding: 0;
+    transition: 200ms ease-out;
+    overflow: hidden;
+    max-width: 70%;
+}
+
+.disclosure__panel-enter {
+    max-height: 0;
+    opacity: 0;
+}
+
+.disclosure__panel-enter-to {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: 16px;
+}
+
+.disclosure__panel-enter-active {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: 16px;
+}
+
+.disclosure__panel-leave {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: 16px;
+}
+
+.disclosure__panel-leave-to {
+    max-height: 0;
+    opacity: 0;
+    padding-bottom: 0;
+}

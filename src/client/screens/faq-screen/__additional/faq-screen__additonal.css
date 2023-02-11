@@ -1,0 +1,25 @@
+.faq-screen__additional {
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    padding: 16px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-screen__additional-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--black);
+}
+
+.faq-screen__additional-phone {
+    margin: 0;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: var(--black);
+    text-decoration: none;
+}

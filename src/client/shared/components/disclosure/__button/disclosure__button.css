@@ -1,0 +1,20 @@
+.disclosure__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border: none;
+    border-top: 1px solid #EAEAEA;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.disclosure__button-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+}

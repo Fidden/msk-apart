@@ -1,0 +1,15 @@
+.faq-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 878px;
+    margin: 0 auto;
+}
+
+.faq-screen__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--black);
+    margin: 0 0 16px;
+}
