@@ -22,6 +22,8 @@ export const BreadcrumbItem: FC<IBreadcrumbItemProps> = ({route}) => (
             className={cnBreadcrumb('item-icon')}
             src={ArrowIcon}
             alt={'arrow'}
+            width={9}
+            height={9}
         />
     </li>
 );

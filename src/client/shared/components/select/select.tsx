@@ -26,6 +26,8 @@ export const Select: FC<ISelectProps> & { Option: FC<ISelectOptionProps> } = (pr
                         src={ArrowIcon}
                         alt={'arrow'}
                         aria-hidden={true}
+                        width={7}
+                        height={4}
                     />
                 </Listbox.Button>
                 <Listbox.Options className={cnSelect('options')}>

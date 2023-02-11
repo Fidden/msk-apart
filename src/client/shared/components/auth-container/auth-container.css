@@ -25,6 +25,7 @@
     gap: 16px;
     max-width: 416px;
     width: 100%;
+    flex: 1;
 }
 
 .auth-container__form-header {
