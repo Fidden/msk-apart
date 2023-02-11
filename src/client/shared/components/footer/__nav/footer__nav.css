@@ -13,6 +13,7 @@
     line-height: 16px;
     color: var(--black);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer__nav-item a {
