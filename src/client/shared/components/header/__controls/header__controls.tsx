@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {FC} from 'react';
 import EnterIcon from '../assets/enter.svg';
 import HeartIcon from '../assets/heart.svg';
@@ -14,12 +15,15 @@ export const HeaderControls: FC = () => (
                 alt={'search'}
             />
         </div>
-        <div className={cnHeader('controls-item')}>
+        <Link
+            href={'/favorites'}
+            className={cnHeader('controls-item')}
+        >
             <Image
                 src={HeartIcon}
                 alt={'like'}
             />
-        </div>
+        </Link>
         <button className={cnHeader('controls-auth')}>
             Войти
             <Image

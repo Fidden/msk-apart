@@ -23,8 +23,6 @@ export const Empty: FC<IEmptyProps> = (props) => {
                 className={cnEmpty('illustration')}
                 src={props.illustration}
                 alt={'illustration'}
-                width={179}
-                height={64}
             />
             <Link
                 className={cnEmpty('link')}
