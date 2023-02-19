@@ -1,10 +1,10 @@
-import {FC, useContext} from 'react';
-import {ProductPageContext} from '~/client/screens/product-screen/product-screen';
+import {FC} from 'react';
+import {useProductStore} from '~/client/shared/stores/product.store';
 import {cnProductScreen} from '../product-screen.const';
 import './product-screen__title.css';
 
 export const ProductScreenTitle: FC = () => {
-    const {product} = useContext(ProductPageContext);
+    const product = useProductStore(state => state.product);
     if (!product) {
         return null;
     }

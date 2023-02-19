@@ -1,16 +1,26 @@
 import Image from 'next/image';
 import {useRouter} from 'next/router';
-import {FC, useContext} from 'react';
-import {ProductPageContext} from '~/client/screens/product-screen/product-screen';
+import {FC} from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 import {Button} from '~/client/shared/components/button/button';
+import {useProductStore} from '~/client/shared/stores/product.store';
 import {cnProductScreen} from '../product-screen.const';
 import ArrowIcon from './assets/arrow.svg';
 import HeartIcon from './assets/heart.svg';
 import './product-screen__images.css';
 
+const responsive = {
+    all: {
+        breakpoint: {max: 4000, min: 0},
+        items: 4,
+        partialVisibilityGutter: 40
+    },
+};
+
 export const ProductScreenImages: FC = () => {
     const router = useRouter();
-    const {product} = useContext(ProductPageContext);
+    const product = useProductStore(state => state.product);
     if (!product) {
         return null;
     }
@@ -40,12 +50,18 @@ export const ProductScreenImages: FC = () => {
             </Button>
             <div className={cnProductScreen('images-main')}>
                 <Image
-                    src={product.images[0]}
+                    src={product.image}
                     alt={'main-image'}
                     fill
                 />
             </div>
-            <div className={cnProductScreen('images-bar')}>
+            <Carousel
+                className={cnProductScreen('images-bar')}
+                responsive={responsive}
+                infinite={true}
+                ssr={true}
+                arrows={false}
+            >
                 {product.images.map(image => (
                     <div
                         key={image}
@@ -58,7 +74,7 @@ export const ProductScreenImages: FC = () => {
                         />
                     </div>
                 ))}
-            </div>
+            </Carousel>
         </div>
     );
 };

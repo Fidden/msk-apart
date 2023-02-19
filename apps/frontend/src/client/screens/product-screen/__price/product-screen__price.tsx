@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import {FC, useContext} from 'react';
-import {ProductPageContext} from '~/client/screens/product-screen/product-screen';
+import {FC} from 'react';
 import {cnProductScreen} from '~/client/screens/product-screen/product-screen.const';
+import {useProductStore} from '~/client/shared/stores/product.store';
 import ArrowIcon from './assets/arrow.svg';
 import './product-screen__price.css';
 
 export const ProductScreenPrice: FC = () => {
-    const {product} = useContext(ProductPageContext);
+    const product = useProductStore(state => state.product);
     if (!product) {
         return null;
     }
@@ -39,9 +39,9 @@ export const ProductScreenPrice: FC = () => {
                     {localePricePerMeter} м<sup>2</sup>
                 </p>
             </div>
-            <p className={cnProductScreen('price-permonth')}>
-                от 88 069 ₽/мес в ипотеку
-            </p>
+            {/*<p className={cnProductScreen('price-permonth')}>*/}
+            {/*    от 88 069 ₽/мес в ипотеку*/}
+            {/*</p>*/}
         </div>
     );
 };

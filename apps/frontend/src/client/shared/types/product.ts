@@ -12,10 +12,22 @@ export interface IProduct {
         total: number
     };
     area: number;
+    areaData: {
+        living?: number;
+        kitchen?: number;
+        year?: number;
+    };
     areaDescription: string;
     subway: {
         color: string;
         station: string;
         distance: number;
     };
+    corpus?: string;
+    finishing?: string;
+    repair?: string;
+    buildType?: string;
+    bathroomType?: string;
+    balcony?: number;
+    roomType?: string;
 }

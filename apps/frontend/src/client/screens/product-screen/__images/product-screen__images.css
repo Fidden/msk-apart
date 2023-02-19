@@ -4,6 +4,7 @@
     flex: 1;
     gap: 8px;
     position: relative;
+    max-width: 877px;
 }
 
 .product-screen__images-back, .product-screen__images-favorite {
@@ -37,7 +38,7 @@
     display: flex;
     flex-direction: row;
     gap: 8px;
-    height: 213px;
+    height: 133px;
 }
 
 .product-screen__images-bar-item {
@@ -46,4 +47,20 @@
     height: 100%;
     border-radius: 4px;
     overflow: hidden;
+}
+
+.product-screen__images-carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.react-multi-carousel-track {
+    height: 100%;
+    gap: 8px;
+}
+
+.react-multi-carousel-item {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
 }

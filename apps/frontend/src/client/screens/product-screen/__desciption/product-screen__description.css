@@ -18,3 +18,7 @@
     font-size: 16px;
     line-height: 150%;
 }
+
+.product-screen__description-text:first-letter {
+    text-transform: uppercase;
+}

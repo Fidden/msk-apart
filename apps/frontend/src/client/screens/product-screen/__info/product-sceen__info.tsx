@@ -1,54 +1,79 @@
 import {FC} from 'react';
 import {cnProductScreen} from '~/client/screens/product-screen/product-screen.const';
+import {useProductStore} from '~/client/shared/stores/product.store';
 import './product-screen__info.css';
 
 export const ProductScreenInfo: FC = () => {
+    const product = useProductStore(state => state.product);
+    if (!product) {
+        return null;
+    }
+
+    const renderText = (data?: string | number, postData?: JSX.Element) => {
+        if (data) {
+            if (typeof data === 'number' && data < 0) {
+                return 'Нет данных';
+            }
+
+            return <>
+                {data} {postData}
+            </>;
+        }
+
+        return 'Нет данных';
+    };
+
     return (
         <div className={cnProductScreen('info')}>
             <header className={cnProductScreen('info-header')}>
                 <p className={cnProductScreen('info-header-text')}>
                     Жилая площадь
                     <span>
-                        50 м<sup>2</sup>
+                        {renderText(product.areaData?.living, <>м<sup>2</sup></>)}
                     </span>
                 </p>
                 <p className={cnProductScreen('info-header-text')}>
                     Площадь кухни
                     <span>
-                        12 м<sup>2</sup>
+                        {renderText(product.areaData?.kitchen, <>м<sup>2</sup></>)}
                     </span>
                 </p>
                 <p className={cnProductScreen('info-header-text')}>
                     Год постройки
                     <span>
-                        2010
+                        {renderText(product.areaData?.year)}
                     </span>
                 </p>
             </header>
             <ul className={cnProductScreen('info-body')}>
                 <li className={cnProductScreen('info-body-text')}>
-                    Этаж<span>2 из 25</span>
+                    Этаж<span>{product.floor.value} из {product.floor.total}</span>
+                </li>
+                {product.corpus &&
+                    <li className={cnProductScreen('info-body-text')}>
+                        Корпус<span>{product.corpus}</span>
+                    </li>
+                }
+                <li className={cnProductScreen('info-body-text')}>
+                    Отделка<span>{product?.finishing || 'Нет данных'}</span>
                 </li>
                 <li className={cnProductScreen('info-body-text')}>
-                    Корпус<span>49.2</span>
+                    Ремонт<span>{product?.repair || 'Нет данных'}</span>
                 </li>
                 <li className={cnProductScreen('info-body-text')}>
-                    Заселение<span>Оформление в собственность</span>
+                    Санузел<span>{product?.bathroomType || 'Нет данных'}</span>
                 </li>
                 <li className={cnProductScreen('info-body-text')}>
-                    Отделка<span>Готовая отделка</span>
+                    Тип здания<span>{product?.buildType || 'Нет данных'}</span>
                 </li>
                 <li className={cnProductScreen('info-body-text')}>
-                    Прописка<span>Московская область</span>
+                    Номер на этаже<span>{product.floor.value}</span>
                 </li>
                 <li className={cnProductScreen('info-body-text')}>
-                    Артикул<span>662541</span>
+                    Балкон\Лоджия<span>{product?.balcony === 0 ? 'Нет' : 'Есть'}</span>
                 </li>
                 <li className={cnProductScreen('info-body-text')}>
-                    Секция<span>5</span>
-                </li>
-                <li className={cnProductScreen('info-body-text')}>
-                    Номер на этаже<span>7</span>
+                    Тип комнат<span>{product?.roomType}</span>
                 </li>
             </ul>
         </div>
