@@ -23,7 +23,7 @@ class ProductController
                         'area'
                     )
                 )
-            )->paginate()
+            )->valid()->paginate()
         );
     }
 
