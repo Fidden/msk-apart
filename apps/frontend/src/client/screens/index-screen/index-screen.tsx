@@ -5,7 +5,7 @@ import {IndexScreenConsult} from '~/client/screens/index-screen/__consult/index-
 import {IndexScreenCount} from '~/client/screens/index-screen/__count/index-screen__count';
 import {StockProduct} from '~/client/shared/components/stock-products/stock-product';
 import {PageLayout} from '~/client/shared/layouts/page-layout/page-layout';
-import {productsMock} from '~/client/shared/mocks/products.mock';
+import {IProduct} from '~/client/shared/types/product';
 import {Screen} from '~/client/shared/types/screen';
 import {IndexScreenSearch} from './__search/index-screen__search';
 
@@ -20,14 +20,20 @@ const count = {
     ap_new: 588585
 };
 
-export const IndexScreen: Screen = () => {
+interface IIndexScreenProps {
+    special: IProduct[];
+}
+
+export const IndexScreen: Screen<IIndexScreenProps> = (props) => {
     return (
         <PageLayout>
             <IndexScreenSearch/>
             <IndexScreenAdvantage/>
-            <StockProduct
-                products={productsMock}
-            />
+            {props?.special?.length > 0 &&
+                <StockProduct
+                    products={props?.special}
+                />
+            }
             <IndexScreenCount
                 count={count}
             />

@@ -1,9 +1,13 @@
 import {IndexScreen} from '~/client/screens/index-screen/index-screen';
+import {IProduct} from '~/client/shared/types/product';
+import {IResponse} from '~/client/shared/types/response';
+import {axiosInstance} from '~/pages/_app';
 
 IndexScreen.getInitialProps = async () => {
-    const res = await fetch('https://api.github.com/repos/vercel/next.js');
-    const json = await res.json();
-    return {stars: json.stargazers_count};
+    const special = await axiosInstance.get<IResponse<IProduct[]>>(`/special`);
+    return {
+        special: special.data.data
+    };
 };
 
 export default IndexScreen;
