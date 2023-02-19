@@ -15,3 +15,10 @@
     height: 80%;
     width: 1px;
 }
+
+.product__info sup {
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--black);
+    margin-left: 2px;
+}

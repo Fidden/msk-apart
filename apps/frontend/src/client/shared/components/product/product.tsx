@@ -27,7 +27,7 @@ const ProductPresenter: FC<IProductProps> = ({product, className}) => {
             href={`/product/${product.id}`}
         >
             <ProductImages
-                images={[product.image, product.image, product.image]}
+                images={product.images}
                 image={product.image}
             />
             <ProductBody>
@@ -42,7 +42,7 @@ const ProductPresenter: FC<IProductProps> = ({product, className}) => {
                 />
                 <ProductSubway subway={product.subway}/>
                 <ProductAddress address={product.address}/>
-                <ProductArea areaDescription={product.areaDescription}/>
+                <ProductArea areaData={product.areaData}/>
                 <ProductDescription description={product.description}/>
                 <ProductBody.Footer>
                     <Button

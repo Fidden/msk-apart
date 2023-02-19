@@ -12,6 +12,6 @@ export const ProductInfo: FC<IProductInfoProps> = (props) => (
         <span className={cnProduct('info-line')}/>
         этаж {props.floor.value}/{props.floor.total}
         <span className={cnProduct('info-line')}/>
-        {props.area} м2
+        <span>{Number(props.area)?.toFixed(0)} м<sup>2</sup></span>
     </p>
 );

@@ -7,6 +7,7 @@
 
 .product__images-main {
     border-radius: 4px;
+    object-fit: cover;
 }
 
 .product__images-bar {
@@ -18,4 +19,5 @@
 
 .product__images-bar-item {
     border-radius: 4px;
+    object-fit: cover;
 }

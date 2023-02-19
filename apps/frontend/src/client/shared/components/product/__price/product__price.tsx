@@ -9,9 +9,13 @@ export const ProductPrice: FC<IProductPriceProps> = ({price, area}) => {
         maximumFractionDigits: 0
     });
 
+    const formattedPrice = Number(price).toLocaleString('ru-Ru', {
+        maximumFractionDigits: 0
+    });
+
     return (
         <p className={cnProduct('price')}>
-            {price.toLocaleString('ru-Ru')} ₽
+            {formattedPrice} ₽
             <span className={cnProduct('price-per')}>
                 {pricePerMeter} ₽/м<sup>2</sup>
             </span>

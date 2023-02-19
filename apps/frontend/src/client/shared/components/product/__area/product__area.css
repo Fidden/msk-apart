@@ -4,4 +4,20 @@
     line-height: 16px;
     color: #999999;
     margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.product__area span::after {
+    content: ',';
+    display: inline;
+    margin-right: 5px;
+}
+
+
+.product__area span:last-child::after {
+    content: '';
+    display: inline;
+    margin-right: 0;
 }

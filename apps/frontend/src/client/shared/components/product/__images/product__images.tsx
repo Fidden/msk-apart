@@ -8,28 +8,30 @@ interface IProductImagesProps {
     image: string;
 }
 
-export const ProductImages: FC<IProductImagesProps> = ({images, image}) => (
-    <div className={cnProduct('images')}>
-        <div className={cnProduct('images-bar')}>
-            {images.map(src =>
-                <Image
-                    className={cnProduct('images-bar-item')}
-                    width={106}
-                    height={61}
-                    key={src}
-                    src={src}
-                    alt={'image'}
-                    aria-hidden
-                />)
-            }
+export const ProductImages: FC<IProductImagesProps> = ({images, image}) => {
+    return (
+        <div className={cnProduct('images')}>
+            <div className={cnProduct('images-bar')}>
+                {images.slice(0, 3).map(src =>
+                    <Image
+                        className={cnProduct('images-bar-item')}
+                        width={106}
+                        height={61}
+                        key={src}
+                        src={src}
+                        alt={'image'}
+                        aria-hidden
+                    />)
+                }
+            </div>
+            <Image
+                className={cnProduct('images-main')}
+                src={image}
+                alt={'main-image'}
+                aria-hidden
+                width={324}
+                height={200}
+            />
         </div>
-        <Image
-            className={cnProduct('images-main')}
-            src={image}
-            alt={'main-image'}
-            aria-hidden
-            width={324}
-            height={200}
-        />
-    </div>
-);
+    );
+};
