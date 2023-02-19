@@ -15,7 +15,7 @@ const navRoutes = [
         },
         {
             title: 'Первичное жильё',
-            href: '/'
+            href: '/first-home'
         },
         {
             title: 'Услуги',
@@ -29,11 +29,11 @@ const navRoutes = [
     [
         {
             title: 'Договор-оферта',
-            href: '/'
+            href: '/rules'
         },
         {
-            title: 'Политика конфеденциальности',
-            href: '/'
+            title: 'Политика конфиденциальности',
+            href: '/privacy'
         },
         {
             title: 'Вопросы и ответы',
