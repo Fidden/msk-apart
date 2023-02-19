@@ -1,13 +1,28 @@
-import {FC} from 'react';
+import {NextPage} from 'next';
+import {useEffect} from 'react';
 import {Breadcrumb} from '~/client/shared/components/breadcrumb/breadcrumb';
+import {Pagination} from '~/client/shared/components/pagination/pagination';
 import {Product} from '~/client/shared/components/product/product';
 import {Select} from '~/client/shared/components/select/select';
 import {PageLayout} from '~/client/shared/layouts/page-layout/page-layout';
 import {breadcrumbRoutes} from '~/client/shared/mocks/breadcrumb.mock';
-import {productsMock} from '~/client/shared/mocks/products.mock';
+import {useCatalogStore} from '~/client/shared/stores/catalog.store';
+import {IPagination} from '~/client/shared/types/pagination';
+import {IProduct} from '~/client/shared/types/product';
 import {cnCatalogScreen} from './catalog-screen.const';
 
-export const CatalogScreen: FC = () => {
+type CatalogScreenProps = IPagination<IProduct>;
+
+export const CatalogScreen: NextPage<CatalogScreenProps> = (props) => {
+    const setCatalog = useCatalogStore((state) => state.set);
+    const fetchCatalog = useCatalogStore((state) => state.fetch);
+    const appendCatalog = useCatalogStore((state) => state.append);
+    const products = useCatalogStore((state) => state.products);
+
+    useEffect(() => {
+        setCatalog(props);
+    }, []);
+
     return (
         <PageLayout>
             <Breadcrumb routes={breadcrumbRoutes}/>
@@ -25,7 +40,7 @@ export const CatalogScreen: FC = () => {
                     </div>
                 </aside>
                 <div className={cnCatalogScreen('content')}>
-                    {productsMock.map(product =>
+                    {products?.data?.map(product =>
                         <Product
                             key={product.id}
                             product={product}
@@ -33,6 +48,12 @@ export const CatalogScreen: FC = () => {
                     }
                 </div>
             </section>
+            {products?.meta &&
+                <Pagination
+                    onPageChange={async (page) => setCatalog(await fetchCatalog(page))}
+                    onPageAppend={async (page) => appendCatalog(await fetchCatalog(page))}
+                    meta={products?.meta}
+                />}
         </PageLayout>
     );
 };
