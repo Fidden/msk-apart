@@ -8,11 +8,13 @@ use App\Models\Product\ProductField;
 use App\Models\Stock\StockField;
 use App\Models\Stock\StockFieldVariant;
 use App\Models\Stock\StockType;
+use Exception;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 
 class ParseJob implements ShouldQueue
 {
@@ -57,13 +59,18 @@ class ParseJob implements ShouldQueue
                     ]);
 
                     foreach ($product['fields'] as $field) {
-                        ProductField::create([
-                            'product_id' => $product['id'],
-                            'stock_field_id' => $field['id'],
-                            'value' => is_array($field['value'])
-                                ? implode(',', $field['value'])
-                                : $field['value']
-                        ]);
+                        try {
+                            ProductField::firstOrCreate([
+                                'product_id' => $product['id'],
+                                'stock_field_id' => $field['id'],
+                                'value' => is_array($field['value'])
+                                    ? implode(',', $field['value'])
+                                    : $field['value']
+                            ]);
+                        }
+                        catch (Exception $exception) {
+                            Log::info($exception->getMessage());
+                        }
                     }
                 }
             }
