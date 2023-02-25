@@ -8,6 +8,9 @@ use App\Models\User;
 use App\Notifications\EmailVerificationNotification;
 use App\Services\ResponseService;
 use App\Services\UserTokenService;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Http\Response;
 
 class UserController
 {
@@ -42,7 +45,7 @@ class UserController
         return ResponseService::error('Неверный логин или пароль', 401);
     }
 
-    public function logout()
+    public function logout(): Response|Application|ResponseFactory
     {
         auth()->user()->forceFill([
             'api_token' => null,
@@ -50,5 +53,4 @@ class UserController
 
         return response(null, 200);
     }
-
 }
