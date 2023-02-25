@@ -11,6 +11,13 @@ class UserRegisterRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [];
+        return [
+            'name' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'patronymic' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|string|max:255',
+            'password' => 'required|string|max:255'
+        ];
     }
 }
