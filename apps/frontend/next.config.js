@@ -5,6 +5,9 @@ const nextConfig = {
     reactStrictMode: true,
     images: {
         domains: ['mskr.intrumnet.com']
+    },
+    env :{
+         API_URL: 'http://26.225.178.228:3001/api'
     }
 };
 
