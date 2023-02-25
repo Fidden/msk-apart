@@ -44,6 +44,46 @@ class Product extends Model
         return $this->fields()->where('stock_field_id', $id);
     }
 
+    public function scopeOneRoom()
+    {
+        return $this->where('name', "1-к квартира");
+    }
+
+    public function scopeTwoRoom()
+    {
+        return $this->where('name', "2-к квартира");
+    }
+
+    public function scopeThreeRoom()
+    {
+        return $this->where('name', "3-к квартира");
+    }
+
+    public function scopeFourRoom()
+    {
+        return $this->where('name', '4-к квартира');
+    }
+
+    public function scopeJustRoom()
+    {
+        return $this->where('name', 'Комната');
+    }
+
+    public function scopeSuburban()
+    {
+        return $this->where('stock_type_id', 3);
+    }
+
+    public function scopeAtelier()
+    {
+        return $this->where('name', 'Студия');
+    }
+
+    public function scopeCommercial()
+    {
+        return $this->where('stock_type_id', 2);
+    }
+
     public function images(): HasMany
     {
         return $this->stockField(474);
