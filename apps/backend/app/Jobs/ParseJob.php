@@ -54,7 +54,7 @@ class ParseJob implements ShouldQueue
                 foreach ($products as $product) {
                     Product::firstOrCreate([
                         'id' => $product['id'],
-                        'name' => $product['name'],
+                        'name' => $this->getProductName($type, $product['name']),
                         'stock_type_id' => $type->id
                     ]);
 
@@ -67,8 +67,7 @@ class ParseJob implements ShouldQueue
                                     ? implode(',', $field['value'])
                                     : $field['value']
                             ]);
-                        }
-                        catch (Exception $exception) {
+                        } catch (Exception $exception) {
                             Log::info($exception->getMessage());
                         }
                     }
@@ -120,5 +119,16 @@ class ParseJob implements ShouldQueue
                 'name' => $type['name']
             ]);
         }
+    }
+
+    private function getProductName(StockType $type, string $name)
+    {
+        if ($type->id === 3 && !$name)
+            return 'Дом / участок';
+        else if ($type->type === 4 && !$name) {
+            return 'Гаражи / парковки';
+        }
+
+        return $name;
     }
 }
