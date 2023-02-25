@@ -1,6 +1,6 @@
 import Image, {StaticImageData} from 'next/image';
 import Link from 'next/link';
-import {FC, PropsWithChildren} from 'react';
+import {FC, FormEvent, PropsWithChildren} from 'react';
 import {Button} from '~/client/shared/components/button/button';
 import {cnAuthContainer} from './auth-container.const';
 
@@ -18,12 +18,23 @@ interface IAuthContainerProps extends PropsWithChildren {
         href: string;
     };
     footerText?: string;
+    onSubmit?: () => void;
 }
 
 export const AuthContainer: FC<IAuthContainerProps> = (props) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (props.onSubmit) {
+            props.onSubmit();
+        }
+    };
+
     return (
         <section className={cnAuthContainer({'disable-image': !props.image})}>
-            <form className={cnAuthContainer('form')}>
+            <form
+                onSubmit={handleSubmit}
+                className={cnAuthContainer('form')}
+            >
                 <header className={cnAuthContainer('form-header')}>
                     <h3 className={cnAuthContainer('form-title')}>
                         {props.title}
