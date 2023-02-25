@@ -6,22 +6,13 @@ import {IndexScreenCount} from '~/client/screens/index-screen/__count/index-scre
 import {StockProduct} from '~/client/shared/components/stock-products/stock-product';
 import {PageLayout} from '~/client/shared/layouts/page-layout/page-layout';
 import {IProduct} from '~/client/shared/types/product';
+import {IProductInfo} from '~/client/shared/types/product-info';
 import {Screen} from '~/client/shared/types/screen';
 import {IndexScreenSearch} from './__search/index-screen__search';
 
-const count = {
-    rooms_1: 4561,
-    rooms_2: 3234,
-    rooms_3: 4578,
-    out_city: 2344,
-    commercial: 12345,
-    rooms_mo: 2490358,
-    rooms_mos: 734778,
-    ap_new: 588585
-};
-
 interface IIndexScreenProps {
     special: IProduct[];
+    productInfo: IProductInfo;
 }
 
 export const IndexScreen: Screen<IIndexScreenProps> = (props) => {
@@ -35,7 +26,7 @@ export const IndexScreen: Screen<IIndexScreenProps> = (props) => {
                 />
             }
             <IndexScreenCount
-                count={count}
+                count={props.productInfo}
             />
             <IndexScreenAbout/>
             <IndexScreenConsult/>

@@ -1,9 +1,10 @@
 import {FC} from 'react';
+import {IProductInfo} from '~/client/shared/types/product-info';
 import {cnIndexScreen} from '../index-screen.const';
 import './index-screen__count.css';
 
 interface IIndexScreenCountProps {
-    count: Record<string, number>;
+    count: IProductInfo;
 }
 
 export const IndexScreenCount: FC<IIndexScreenCountProps> = ({count}) => {
@@ -16,16 +17,16 @@ export const IndexScreenCount: FC<IIndexScreenCountProps> = ({count}) => {
                 return '2 - комнатные';
             case 'rooms_3':
                 return '3 - комнатные';
+            case 'rooms_4':
+                return '4 - комнатные';
             case 'out_city':
                 return 'Загородные участки';
             case 'commercial':
                 return 'Коммерческая недвижимость';
-            case 'rooms_mo':
-                return 'Комнаты в Московской области';
+            case 'atelier':
+                return 'Студии';
             case 'rooms_mos':
                 return 'Комнаты в Москве';
-            case 'ap_new':
-                return 'Квартиры в новостройках';
             default:
                 return key;
         }
@@ -39,7 +40,7 @@ export const IndexScreenCount: FC<IIndexScreenCountProps> = ({count}) => {
                         Купить
                     </h3>
                     <ul className={cnIndexScreen('count-list')}>
-                        {Object.entries(count).map(([key, value]) =>
+                        {Object?.entries(count)?.map(([key, value]) =>
                             <li key={key}>
                                 {keyToText(key)}
                                 <span className={cnIndexScreen('count-line')}/>
