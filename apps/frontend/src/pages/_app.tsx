@@ -6,7 +6,7 @@ import {Hydrate, QueryClient, QueryClientProvider} from 'react-query';
 import '~/styles/globals.css';
 
 export const axiosInstance = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api',
+    baseURL: process.env.API_URL,
     headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json'
