@@ -15,6 +15,7 @@ import {ProductSubway} from './__subway/product__subway';
 import {withProductSizeSmall} from './_size/Product_size_sm';
 import HeartIcon from './assets/heart.svg';
 import {cnProduct} from './product.const';
+import {withProductVariantProfile} from "~/client/shared/components/product/_variant/Product_variant_profile";
 
 export interface IProductProps extends IClassNameProps {
     product: IProduct;
@@ -69,5 +70,6 @@ const ProductPresenter: FC<IProductProps> = ({product, className}) => {
 };
 
 export const Product = compose(
-    withProductSizeSmall
+    withProductSizeSmall,
+    withProductVariantProfile
 )(ProductPresenter);
