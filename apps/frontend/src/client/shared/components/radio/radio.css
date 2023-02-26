@@ -24,6 +24,7 @@
     border: 1px solid #1B1B1B;
     cursor: pointer;
 }
+
 .radiobutton__button:after {
     content: '';
     position: absolute;
@@ -36,6 +37,7 @@
     transform: scale(0);
     transition: all .2s;
 }
+
 .radiobutton__input:checked ~ .radiobutton__button:after {
     transform: scale(1);
 }
