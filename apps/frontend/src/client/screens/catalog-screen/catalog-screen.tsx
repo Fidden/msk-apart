@@ -13,47 +13,59 @@ import {cnCatalogScreen} from './catalog-screen.const';
 
 type CatalogScreenProps = IPagination<IProduct>;
 
+const stockTypes = [
+	{id: 1, name: 'Квартиры и комнаты'},
+	{id: 2, name: 'Коммерческая'},
+	{id: 3, name: 'Дома и участки'},
+	{id: 4, name: 'Гаражи / парковки'}
+];
+
 export const CatalogScreen: NextPage<CatalogScreenProps> = (props) => {
-    const setCatalog = useCatalogStore((state) => state.set);
-    const fetchCatalog = useCatalogStore((state) => state.fetch);
-    const appendCatalog = useCatalogStore((state) => state.append);
-    const products = useCatalogStore((state) => state.products);
+	const setCatalog = useCatalogStore((state) => state.set);
+	const fetchCatalog = useCatalogStore((state) => state.fetch);
+	const appendCatalog = useCatalogStore((state) => state.append);
+	const products = useCatalogStore((state) => state.products);
 
-    useEffect(() => {
-        setCatalog(props);
-    }, []);
+	useEffect(() => {
+		setCatalog(props);
+	}, []);
 
-    return (
-        <PageLayout>
-            <Breadcrumb routes={breadcrumbRoutes}/>
-            <section className={cnCatalogScreen()}>
-                <aside className={cnCatalogScreen('filter')}>
-                    <div className={cnCatalogScreen('filter-block')}>
-                        <p className={cnCatalogScreen('filter-title')}>
+	return (
+		<PageLayout>
+			<Breadcrumb routes={breadcrumbRoutes}/>
+			<section className={cnCatalogScreen()}>
+				<aside className={cnCatalogScreen('filter')}>
+					<div className={cnCatalogScreen('filter-block')}>
+						<p className={cnCatalogScreen('filter-title')}>
                             Тип недвижимости
-                        </p>
-                        <Select>
-                            <Select.Option value={'Квартира'}>
-                                Квартира
-                            </Select.Option>
-                        </Select>
-                    </div>
-                </aside>
-                <div className={cnCatalogScreen('content')}>
-                    {products?.data?.map(product =>
-                        <Product
-                            key={product.id}
-                            product={product}
-                        />)
-                    }
-                </div>
-            </section>
-            {products?.meta &&
+						</p>
+						<Select value={'Квартира'}>
+							{stockTypes.map(item => (
+								<Select.Option
+									key={item.id}
+									value={'Квартира'}
+								>
+									{item.name}
+								</Select.Option>
+							))}
+						</Select>
+					</div>
+				</aside>
+				<div className={cnCatalogScreen('content')}>
+					{products?.data?.map(product =>
+						<Product
+							key={product.id}
+							product={product}
+						/>)
+					}
+				</div>
+			</section>
+			{products?.meta &&
                 <Pagination
-                    onPageChange={async (page) => setCatalog(await fetchCatalog(page))}
-                    onPageAppend={async (page) => appendCatalog(await fetchCatalog(page))}
-                    meta={products?.meta}
+                	onPageChange={async (page) => setCatalog(await fetchCatalog(page))}
+                	onPageAppend={async (page) => appendCatalog(await fetchCatalog(page))}
+                	meta={products?.meta}
                 />}
-        </PageLayout>
-    );
+		</PageLayout>
+	);
 };

@@ -1,28 +1,28 @@
 .button {
-    border-radius: 4px;
-    background: var(--black);
-    border: 1px solid var(--black);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
-    color: white;
-    padding: 8px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    cursor: pointer;
+	align-items: center;
+	background: var(--black);
+	border: 1px solid var(--black);
+	border-radius: 4px;
+	color: white;
+	cursor: pointer;
+	display: flex;
+	font-size: 14px;
+	font-weight: 500;
+	gap: 8px;
+	justify-content: center;
+	line-height: 24px;
+	padding: 8px 16px;
 }
 
 .button_variant_outlined {
-    background: none;
-    border: 1px solid #EAEAEA;
-    color: var(--black);
+	background: none;
+	border: 1px solid #eaeaea;
+	color: var(--black);
 }
 
 .button_size_sm {
-    padding: 8px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 16px;
+	padding: 8px;
 }

@@ -6,29 +6,29 @@ import {AuthContainer} from './auth-container';
 
 
 storiesOf('shared/auth-container', module)
-    .add('default', () => (
-        <AuthContainer
-            title={'Заголовок'}
-            subtitle={'Подзаголовок'}
-            button={{
-                text: 'Кнопка',
-                onClick: () => console.log('Нажатие на кнопку')
-            }}
-        >
-            <Label text={'Лейбл'}>
-                <Input
-                    type={'text'}
-                    placeholder={'Плейсхолдер'}
-                />
-            </Label>
-            <Label text={'Лейбл'}>
-                <Input
-                    type={'text'}
-                    placeholder={'Плейсхолдер'}
-                />
-            </Label>
-            <Button>
-                Отправить
-            </Button>
-        </AuthContainer>
-    ));
+	.add('default', () => (
+		<AuthContainer
+			title={'Заголовок'}
+			subtitle={'Подзаголовок'}
+			button={{
+				text: 'Кнопка',
+				onClick: () => console.log('Нажатие на кнопку')
+			}}
+		>
+			<Label text={'Лейбл'}>
+				<Input
+					type={'text'}
+					placeholder={'Плейсхолдер'}
+				/>
+			</Label>
+			<Label text={'Лейбл'}>
+				<Input
+					type={'text'}
+					placeholder={'Плейсхолдер'}
+				/>
+			</Label>
+			<Button>
+				Отправить
+			</Button>
+		</AuthContainer>
+	));

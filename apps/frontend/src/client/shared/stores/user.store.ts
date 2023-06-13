@@ -7,43 +7,43 @@ import {IValidation} from '~/client/shared/types/validation';
 import {axiosInstance} from '~/pages/_app';
 
 export interface IRegister {
-    name: string;
-    lastname: string;
-    patronymic: string;
-    email: string;
-    phone: string;
-    password: string;
+	name: string;
+	lastname: string;
+	patronymic: string;
+	email: string;
+	phone: string;
+	password: string;
 }
 
 export interface ILogin {
-    login: string;
-    password: string;
+	login: string;
+	password: string;
 }
 
 interface State {
-    register: (data: IRegister) => Promise<IToken | IValidation | undefined>;
-    login: (data: ILogin) => Promise<IToken | IValidation | undefined>;
+	register: (data: IRegister) => Promise<IToken | IValidation | undefined>;
+	login: (data: ILogin) => Promise<IToken | IValidation | undefined>;
 }
 
 export const useUserStore = create<State>()(immer(devtools(set => ({
-    register: async (data) => {
-        try {
-            const res = await axiosInstance.post<IToken>('/user/register', data);
-            return res.data;
-        } catch (e) {
-            if (e instanceof AxiosError) {
-                return e.response?.data as IValidation;
-            }
-        }
-    },
-    login: async (data: ILogin) => {
-        try {
-            const res = await axiosInstance.post<IToken>('/user/login', data);
-            return res.data;
-        } catch (e) {
-            if (e instanceof AxiosError) {
-                return e.response?.data as IValidation;
-            }
-        }
-    }
+	register: async (data) => {
+		try {
+			const res = await axiosInstance.post<IToken>('/user/register', data);
+			return res.data;
+		} catch (e) {
+			if (e instanceof AxiosError) {
+				return e.response?.data as IValidation;
+			}
+		}
+	},
+	login: async (data: ILogin) => {
+		try {
+			const res = await axiosInstance.post<IToken>('/user/login', data);
+			return res.data;
+		} catch (e) {
+			if (e instanceof AxiosError) {
+				return e.response?.data as IValidation;
+			}
+		}
+	}
 }))));

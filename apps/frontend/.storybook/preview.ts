@@ -1,9 +1,9 @@
-import '../src/styles/globals.css';
+import '../src/global/styles/globals.css';
 
 export const parameters = {
-    options: {
-        storySort: {
-            method: 'alphabetical',
-        },
-    },
+	options: {
+		storySort: {
+			method: 'alphabetical'
+		}
+	}
 };

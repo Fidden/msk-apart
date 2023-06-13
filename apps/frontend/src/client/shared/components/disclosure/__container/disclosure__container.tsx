@@ -4,10 +4,10 @@ import {cnDisclosure} from '~/client/shared/components/disclosure/disclosure.con
 import './disclosure__container.css';
 
 export const DisclosureContainer: FC<PropsWithChildren> = ({children}) => (
-    <HLDisclosure
-        as={'ul'}
-        className={cnDisclosure('container')}
-    >
-        {children}
-    </HLDisclosure>
+	<HLDisclosure
+		as={'ul'}
+		className={cnDisclosure('container')}
+	>
+		{children}
+	</HLDisclosure>
 );

@@ -7,11 +7,11 @@ import {FaqScreenInfo} from './__info/faq-screen__info';
 import {cnFaqScreen} from './faq-screen.const';
 
 export const FaqScreen: FC = () => (
-    <PageLayout>
-        <section className={cnFaqScreen()}>
-            <Breadcrumb routes={breadcrumbRoutes}/>
-            <FaqScreenInfo/>
-            <FaqScreenAdditional/>
-        </section>
-    </PageLayout>
+	<PageLayout>
+		<section className={cnFaqScreen()}>
+			<Breadcrumb routes={breadcrumbRoutes}/>
+			<FaqScreenInfo/>
+			<FaqScreenAdditional/>
+		</section>
+	</PageLayout>
 );

@@ -1,45 +1,45 @@
 .product-screen__price {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
 }
 
 .product-screen__price-body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
 }
 
 .product-screen__price-total {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    color: var(--black);
-    margin: 0;
+	color: var(--black);
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+	margin: 0;
 }
 
 .product-screen__price-metre {
-    margin: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: black;
+	color: black;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 0;
 }
 
 .product-screen__price-arrow {
-    border: 1px solid #EAEAEA;
-    border-radius: 4px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	align-items: center;
+	border: 1px solid #eaeaea;
+	border-radius: 4px;
+	display: flex;
+	height: 24px;
+	justify-content: center;
+	width: 24px;
 }
 
 .product-screen__price-permonth {
-    margin: 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 16px;
+	margin: 0;
 }

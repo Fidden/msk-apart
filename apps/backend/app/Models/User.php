@@ -2,13 +2,16 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -19,6 +22,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'lastname',
+        'patronymic',
+        'phone',
         'email',
         'password',
     ];
@@ -41,4 +47,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function verifyCodes(): HasMany
+    {
+        return $this->hasMany(UserVerifyCode::class, 'user_id', 'id');
+    }
+
+    public function createVerifyCode()
+    {
+        $this->verifyCodes()->create([
+            'code' => Str::random(6),
+            'expires_at' => Carbon::now()->addMinutes(10),
+        ]);
+    }
+
+    public function getVerifyCode()
+    {
+        return $this->verifyCodes()
+            ->latest()
+            ->value('code');
+    }
 }

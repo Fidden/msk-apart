@@ -1,20 +1,20 @@
 .disclosure__button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 0;
-    border: none;
-    border-top: 1px solid #EAEAEA;
-    background: none;
-    outline: none;
-    cursor: pointer;
-    text-align: left;
+	align-items: center;
+	background: none;
+	border: none;
+	border-top: 1px solid #eaeaea;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	outline: none;
+	padding: 16px 0;
+	text-align: left;
 }
 
 .disclosure__button-title {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 40px;
-    margin: 0;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 40px;
+	margin: 0;
 }

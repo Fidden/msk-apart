@@ -4,11 +4,11 @@ import {cnButton} from '../button.const';
 
 
 interface IButtonVariantOutlineProps {
-    variant?: 'outlined';
+	variant?: 'outlined';
 }
 
 export const withButtonVariantOutlined = withBemMod<IButtonVariantOutlineProps, IButtonProps>(
-    cnButton(),
-    {variant: 'outlined'},
-    (Button) => (props) => <Button {...props}/>
+	cnButton(),
+	{variant: 'outlined'},
+	(Button) => (props) => <Button {...props}/>
 );

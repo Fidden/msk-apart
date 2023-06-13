@@ -1,72 +1,72 @@
 .index-screen__count {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    padding-top: 56px;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	padding-top: 56px;
 }
 
 .index-screen__count-block {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
 }
 
 .index-screen__count-container {
-    border: 1px solid #EAEAEA;
-    border-radius: 4px;
-    padding: 16px;
-    flex: 1;
+	border: 1px solid #eaeaea;
+	border-radius: 4px;
+	flex: 1;
+	padding: 16px;
 }
 
 .index-screen__count-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: var(--black);
-    margin: 0 0 16px 0;
+	color: var(--black);
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	margin: 0 0 16px 0;
 }
 
 .index-screen__count-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 32px;
-    color: var(--black);
-    padding: 0;
-    margin: 0;
+	color: var(--black);
+	display: flex;
+	flex-direction: column;
+	font-size: 30px;
+	font-weight: 500;
+	gap: 16px;
+	line-height: 32px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .index-screen__count-call-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    margin: 0;
-    color: var(--black);
+	color: var(--black);
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	margin: 0;
 }
 
 .index-screen__count-phone {
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 32px;
-    color: #1B1B1B;
-    margin: auto 0 0 0;
-    padding-top: 48px;
+	color: #1b1b1b;
+	font-size: 30px;
+	font-weight: 500;
+	line-height: 32px;
+	margin: auto 0 0 0;
+	padding-top: 48px;
 }
 
 .index-screen__count-list li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    white-space: nowrap;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	white-space: nowrap;
 }
 
 .index-screen__count-line {
-    width: 100%;
-    height: 1px;
-    background: #EAEAEA;
-    margin: 0 16px;
+	background: #eaeaea;
+	height: 1px;
+	margin: 0 16px;
+	width: 100%;
 }

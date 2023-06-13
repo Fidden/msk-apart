@@ -1,22 +1,22 @@
 .footer__contact {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-    max-width: 224px;
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+	max-width: 224px;
 }
 
 .footer__contact-title {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 130%;
-    color: var(--black);
-    margin: 0;
+	color: var(--black);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 130%;
+	margin: 0;
 }
 
 .footer__contact-made {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 130%;
-    color: var(--black);
-    margin: 0;
+	color: var(--black);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 130%;
+	margin: 0;
 }

@@ -1,12 +1,12 @@
 .product__description {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #999999;
-    margin: 0;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	color: #999;
+	display: -webkit-box;
+	font-size: 12px;
+	font-weight: 400;
+	-webkit-line-clamp: 2;
+	line-height: 16px;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

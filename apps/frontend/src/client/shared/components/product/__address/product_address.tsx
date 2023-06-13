@@ -5,7 +5,7 @@ import './product__adress.css';
 
 type IProductAddressProps = Pick<IProduct, 'address'>;
 export const ProductAddress: FC<IProductAddressProps> = ({address}) => (
-    <p className={cnProduct('address')}>
-        {address}
-    </p>
+	<p className={cnProduct('address')}>
+		{address}
+	</p>
 );

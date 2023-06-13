@@ -11,25 +11,25 @@ import {Screen} from '~/client/shared/types/screen';
 import {IndexScreenSearch} from './__search/index-screen__search';
 
 interface IIndexScreenProps {
-    special: IProduct[];
-    productInfo: IProductInfo;
+	special: IProduct[];
+	productInfo: IProductInfo;
 }
 
 export const IndexScreen: Screen<IIndexScreenProps> = (props) => {
-    return (
-        <PageLayout>
-            <IndexScreenSearch/>
-            <IndexScreenAdvantage/>
-            {props?.special?.length > 0 &&
-                <StockProduct
-                    products={props?.special}
-                />
-            }
-            <IndexScreenCount
-                count={props.productInfo}
-            />
-            <IndexScreenAbout/>
-            <IndexScreenConsult/>
-        </PageLayout>
-    );
+	return (
+		<PageLayout>
+			<IndexScreenSearch/>
+			<IndexScreenAdvantage/>
+			{props?.special?.length > 0 &&
+				<StockProduct
+					products={props?.special}
+				/>
+			}
+			<IndexScreenCount
+				count={props.productInfo}
+			/>
+			<IndexScreenAbout/>
+			<IndexScreenConsult/>
+		</PageLayout>
+	);
 };

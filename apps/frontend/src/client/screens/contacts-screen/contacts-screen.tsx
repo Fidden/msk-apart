@@ -6,11 +6,11 @@ import {ContactsScreenInfo} from './__info/contacts-screen__info';
 import {ContactsScreenMap} from './__map/contacts-sceen__map';
 
 export const ContactsScreen: FC = () => {
-    return (
-        <PageLayout>
-            <Breadcrumb routes={breadcrumbRoutes}/>
-            <ContactsScreenMap/>
-            <ContactsScreenInfo/>
-        </PageLayout>
-    );
+	return (
+		<PageLayout>
+			<Breadcrumb routes={breadcrumbRoutes}/>
+			<ContactsScreenMap/>
+			<ContactsScreenInfo/>
+		</PageLayout>
+	);
 };

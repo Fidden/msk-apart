@@ -1,14 +1,14 @@
 import {CatalogScreen} from '~/client/screens/catalog-screen/catalog-screen';
 import {IPagination} from '~/client/shared/types/pagination';
 import {IProduct} from '~/client/shared/types/product';
-import {axiosInstance} from '~/pages/_app';
+import {urls} from '~/client/shared/utils/urls';
 
 CatalogScreen.getInitialProps = async () => {
-    const products = await axiosInstance.get<IPagination<IProduct>>('/product');
+	const products = await urls.catalog.build<IPagination<IProduct>>();
 
-    return {
-        ...products.data
-    };
+	return {
+		...products.data
+	};
 };
 
 export default CatalogScreen;

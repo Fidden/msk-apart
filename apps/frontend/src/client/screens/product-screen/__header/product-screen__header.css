@@ -1,5 +1,5 @@
 .product-screen__header {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
 }

@@ -9,49 +9,49 @@ import {ILogin, useUserStore} from '~/client/shared/stores/user.store';
 import AsideImage from './assets/image.png';
 
 export const LoginScreen: FC = () => {
-    const router = useRouter();
-    const loginUser = useUserStore(state => state.login);
-    const formData = useRef<ILogin>({
-        login: '',
-        password: ''
-    });
+	const router = useRouter();
+	const loginUser = useUserStore(state => state.login);
+	const formData = useRef<ILogin>({
+		login: '',
+		password: ''
+	});
 
-    return (
-        <PageLayout>
-            <AuthContainer
-                title={'Вход'}
-                subtitle={'Рады видеть Вас снова!'}
-                button={{
-                    text: 'Регистрация',
-                    onClick: () => router.push('/register')
-                }}
-                image={AsideImage}
-                action={{
-                    text: 'Не зарегистрированы? -',
-                    linkText: 'Регистрация',
-                    href: '/'
-                }}
-                onSubmit={() => loginUser(formData.current)}
-                footerText={'Нажимая “Войти”, Вы соглашаетесь с политикой обработки персональных данных.'}
-            >
-                <Label text={'Email или телефон'}>
-                    <Input
-                        onChange={e => formData.current.login = e.target.value}
-                        type={'text'}
-                        placeholder={'Введите email или телефон'}
-                    />
-                </Label>
-                <Label text={'Пароль'}>
-                    <Input
-                        onChange={e => formData.current.password = e.target.value}
-                        type={'password'}
-                        placeholder={'Введите пароль'}
-                    />
-                </Label>
-                <Button type={'submit'}>
-                    Войти
-                </Button>
-            </AuthContainer>
-        </PageLayout>
-    );
+	return (
+		<PageLayout>
+			<AuthContainer
+				title={'Вход'}
+				subtitle={'Рады видеть Вас снова!'}
+				button={{
+					text: 'Регистрация',
+					onClick: () => router.push('/register')
+				}}
+				image={AsideImage}
+				action={{
+					text: 'Не зарегистрированы? -',
+					linkText: 'Регистрация',
+					href: '/'
+				}}
+				onSubmit={() => loginUser(formData.current)}
+				footerText={'Нажимая “Войти”, Вы соглашаетесь с политикой обработки персональных данных.'}
+			>
+				<Label text={'Email или телефон'}>
+					<Input
+						onChange={e => formData.current.login = e.target.value}
+						type={'text'}
+						placeholder={'Введите email или телефон'}
+					/>
+				</Label>
+				<Label text={'Пароль'}>
+					<Input
+						onChange={e => formData.current.password = e.target.value}
+						type={'password'}
+						placeholder={'Введите пароль'}
+					/>
+				</Label>
+				<Button type={'submit'}>
+					Войти
+				</Button>
+			</AuthContainer>
+		</PageLayout>
+	);
 };

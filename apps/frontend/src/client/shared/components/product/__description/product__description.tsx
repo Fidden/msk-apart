@@ -5,7 +5,7 @@ import './product__description.css';
 
 type IProductDescriptionProps = Pick<IProduct, 'description'>;
 export const ProductDescription: FC<IProductDescriptionProps> = ({description}) => (
-    <p className={cnProduct('description')}>
-        {description}
-    </p>
+	<p className={cnProduct('description')}>
+		{description}
+	</p>
 );

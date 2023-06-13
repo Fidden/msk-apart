@@ -11,27 +11,27 @@ import {IProduct} from '~/client/shared/types/product';
 import {cnProductScreen} from './product-screen.const';
 
 interface IProductScreenProps {
-    product: IProduct;
-    special: IProduct[];
+	product: IProduct;
+	special: IProduct[];
 }
 
 export const ProductScreen: NextPage<IProductScreenProps> = (props) => {
-    const setProduct = useProductStore(state => state.setProduct);
+	const setProduct = useProductStore(state => state.setProduct);
 
-    useEffect(() => {
-        setProduct(props.product);
-    }, []);
+	useEffect(() => {
+		setProduct(props.product);
+	}, []);
 
-    return (
-        <PageLayout>
-            <Breadcrumb routes={breadcrumbRoutes}/>
-            <section className={cnProductScreen()}>
-                <ProductScreenHeader/>
-                <ProductScreenDescription/>
-                {props?.special?.length > 0 &&
-                    <StockProduct products={props.special}/>
-                }
-            </section>
-        </PageLayout>
-    );
+	return (
+		<PageLayout>
+			<Breadcrumb routes={breadcrumbRoutes}/>
+			<section className={cnProductScreen()}>
+				<ProductScreenHeader/>
+				<ProductScreenDescription/>
+				{props?.special?.length > 0 &&
+					<StockProduct products={props.special}/>
+				}
+			</section>
+		</PageLayout>
+	);
 };

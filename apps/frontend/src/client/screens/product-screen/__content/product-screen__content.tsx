@@ -7,12 +7,12 @@ import {cnProductScreen} from '../product-screen.const';
 import './product-screen__content.css';
 
 export const ProductScreenContent: FC = () => {
-    return (
-        <div className={cnProductScreen('content')}>
-            <ProductScreenTitle/>
-            <ProductScreenPrice/>
-            <ProductScreenActions/>
-            <ProductScreenInfo/>
-        </div>
-    );
+	return (
+		<div className={cnProductScreen('content')}>
+			<ProductScreenTitle/>
+			<ProductScreenPrice/>
+			<ProductScreenActions/>
+			<ProductScreenInfo/>
+		</div>
+	);
 };

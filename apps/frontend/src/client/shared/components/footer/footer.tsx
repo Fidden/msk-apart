@@ -8,59 +8,59 @@ import {FooterSocials} from '~/client/shared/components/footer/__socials/footer_
 import {cnFooter} from './footer.const';
 
 const navRoutes = [
-    [
-        {
-            title: 'Карьера',
-            href: '/career'
-        },
-        {
-            title: 'Первичное жильё',
-            href: '/first-home'
-        },
-        {
-            title: 'Услуги',
-            href: '/services'
-        },
-        {
-            title: 'Избранное',
-            href: '/favorites'
-        }
-    ],
-    [
-        {
-            title: 'Договор-оферта',
-            href: '/rules'
-        },
-        {
-            title: 'Политика конфиденциальности',
-            href: '/privacy'
-        },
-        {
-            title: 'Вопросы и ответы',
-            href: '/faq'
-        },
-        {
-            title: 'Личный кабинет',
-            href: '/profile'
-        }
-    ]
+	[
+		{
+			title: 'Карьера',
+			href: '/career'
+		},
+		{
+			title: 'Первичное жильё',
+			href: '/first-home'
+		},
+		{
+			title: 'Услуги',
+			href: '/services'
+		},
+		{
+			title: 'Избранное',
+			href: '/favorites'
+		}
+	],
+	[
+		{
+			title: 'Договор-оферта',
+			href: '/rules'
+		},
+		{
+			title: 'Политика конфиденциальности',
+			href: '/privacy'
+		},
+		{
+			title: 'Вопросы и ответы',
+			href: '/faq'
+		},
+		{
+			title: 'Личный кабинет',
+			href: '/profile'
+		}
+	]
 ];
 
 export const Footer: FC = () => (
-    <footer className={cnFooter()}>
-        <FooterContainer>
-            <FooterContainer.Body>
-                <FooterInfo/>
-                <FooterNav
-                    routes={navRoutes[0]}
-                />
-                <FooterNav
-                    routes={navRoutes[1]}
-                />
-                <FooterSocials/>
-                <FooterContact/>
-            </FooterContainer.Body>
-            <FooterCredits/>
-        </FooterContainer>
-    </footer>
+	<footer className={cnFooter()}>
+		<FooterContainer>
+			<FooterContainer.Body>
+				<FooterInfo/>
+				<FooterNav
+					routes={navRoutes[0]}
+				/>
+				<FooterNav
+					routes={navRoutes[1]}
+				/>
+				<FooterSocials/>
+				<FooterContact/>
+			</FooterContainer.Body>
+			<FooterCredits/>
+		</FooterContainer>
+	</footer>
 );

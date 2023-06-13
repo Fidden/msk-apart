@@ -13,6 +13,13 @@
     "react/prop-types": "off",
     "react/display-name": "off",
     "react-hooks/rules-of-hooks": "off",
+    "indent": [
+      2,
+      "tab",
+      {
+        "SwitchCase": 1
+      }
+    ],
     "semi": [
       2,
       "always"

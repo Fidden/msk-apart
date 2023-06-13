@@ -1,0 +1,42 @@
+@import url("normalize.css");
+
+:root {
+	/* Colors */
+	--black: #1b1b1b;
+	--l: 1024px;
+
+	/* Breakpoints */
+	--m: 768px;
+	--placeholder: #a8aab6;
+	--s: 480px;
+	--xl: 1320px;
+	--xs: 320px;
+}
+
+* {
+	font-family: "Inter", sans-serif;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#__next {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.story-grid-4 {
+	display: grid;
+	grid-gap: 16px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.story-column {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}

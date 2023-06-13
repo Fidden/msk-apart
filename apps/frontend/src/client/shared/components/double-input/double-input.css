@@ -1,35 +1,35 @@
 .double-input {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 8px 16px;
-    gap: 8px;
-    border: 1px solid #EAEAEA;
-    border-radius: 4px;
-    max-width: 233px;
+	align-items: center;
+	border: 1px solid #eaeaea;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	max-width: 233px;
+	padding: 8px 16px;
 }
 
 .double-input__input {
-    width: 100%;
-    background: none;
-    outline: none;
-    border: none;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--black);
+	background: none;
+	border: none;
+	color: var(--black);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	outline: none;
+	width: 100%;
 }
 
 .double-input__input::placeholder {
-    color: #A8AAB6;
+	color: #a8aab6;
 }
 
 .double-input__input::-webkit-inner-spin-button, .double-input__input::-webkit-outer-spin-button {
-    appearance: none;
+	appearance: none;
 }
 
 .double-input__decimetre {
-    height: 24px;
-    background: #A8AAB6;
-    width: 1px;
+	background: #a8aab6;
+	height: 24px;
+	width: 1px;
 }

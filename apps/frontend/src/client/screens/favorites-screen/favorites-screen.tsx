@@ -10,33 +10,33 @@ import {IProduct} from '~/client/shared/types/product';
 import Illustration from './assets/illustration.svg';
 
 export const FavoritesScreen: FC = () => {
-    const [favorites] = useState<IProduct[]>(productsMock);
+	const [favorites] = useState<IProduct[]>(productsMock);
 
-    return (
-        <PageLayout>
-            {favorites?.length > 0
-                ?
-                <div className={cnFavoritesScreen()}>
-                    <h2 className={cnFavoritesScreen('title')}>
-                        Избранное
-                    </h2>
-                    <div className={cnFavoritesScreen('body')}>
-                        {favorites.map(product => (
-                            <Product
-                                product={product}
-                                key={product.id}
-                            />
-                        ))}
-                    </div>
-                </div>
-                :
-                <Empty
-                    breadcrumb={breadcrumbRoutes}
-                    title={'Вы ещё не добавили ничего в избранное'}
-                    illustration={Illustration}
-                />
-            }
-            <StockProduct products={productsMock}/>
-        </PageLayout>
-    );
+	return (
+		<PageLayout>
+			{favorites?.length > 0
+				?
+				<div className={cnFavoritesScreen()}>
+					<h2 className={cnFavoritesScreen('title')}>
+						Избранное
+					</h2>
+					<div className={cnFavoritesScreen('body')}>
+						{favorites.map(product => (
+							<Product
+								product={product}
+								key={product.id}
+							/>
+						))}
+					</div>
+				</div>
+				:
+				<Empty
+					breadcrumb={breadcrumbRoutes}
+					title={'Вы ещё не добавили ничего в избранное'}
+					illustration={Illustration}
+				/>
+			}
+			<StockProduct products={productsMock}/>
+		</PageLayout>
+	);
 };

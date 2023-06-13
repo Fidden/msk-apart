@@ -1,17 +1,20 @@
 .header__controls {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
 }
 
 .header__controls-auth {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-    background: none;
-    outline: none;
-    border: none;
-    cursor: pointer;
+	align-items: center;
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+	outline: none;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 14px;
 }

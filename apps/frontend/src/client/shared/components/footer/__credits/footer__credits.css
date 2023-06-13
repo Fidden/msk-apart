@@ -1,12 +1,12 @@
 .footer__credits {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    color: #999999;
-    padding-top: 16px;
-    margin: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	color: #999;
+	display: -webkit-box;
+	font-size: 12px;
+	font-weight: 400;
+	-webkit-line-clamp: 1;
+	line-height: 16px;
+	margin: 0;
+	overflow: hidden;
+	padding-top: 16px;
+	text-overflow: ellipsis;
 }

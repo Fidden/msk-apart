@@ -7,21 +7,21 @@ import Logo from './assets/logo.svg';
 import {cnHeader} from './header.const';
 
 export const Header: FC = () => {
-    return (
-        <header className={cnHeader()}>
-            <Link
-                href={'/'}
-                className={cnHeader('logo')}
-            >
-                <Image
-                    width={92}
-                    height={16}
-                    src={Logo}
-                    alt={'msk apart'}
-                />
-            </Link>
-            <HeaderNav/>
-            <HeaderControls/>
-        </header>
-    );
+	return (
+		<header className={cnHeader()}>
+			<Link
+				href={'/'}
+				className={cnHeader('logo')}
+			>
+				<Image
+					width={92}
+					height={16}
+					src={Logo}
+					alt={'msk apart'}
+				/>
+			</Link>
+			<HeaderNav/>
+			<HeaderControls/>
+		</header>
+	);
 };

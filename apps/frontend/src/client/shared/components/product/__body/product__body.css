@@ -1,18 +1,18 @@
 .product__body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
 }
 
 .product__body-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
 }
 
 .product__body-footer {
-    display: flex;
-    margin-top: auto;
-    gap: 8px;
+	display: flex;
+	gap: 8px;
+	margin-top: auto;
 }

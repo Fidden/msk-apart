@@ -1,66 +1,66 @@
 .product-screen__images {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 8px;
-    position: relative;
-    max-width: 877px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 8px;
+	max-width: 877px;
+	position: relative;
 }
 
 .product-screen__images-back, .product-screen__images-favorite {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.41);
-    backdrop-filter: blur(17.5px);
-    border: none;
-    color: black;
+	backdrop-filter: blur(17.5px);
+	background: rgba(255, 255, 255, 0.41);
+	border: none;
+	color: black;
+	left: 16px;
+	position: absolute;
+	top: 16px;
+	z-index: 1;
 }
 
 .product-screen__images-favorite {
-    width: 32px;
-    height: 32px;
-    right: 16px;
-    left: unset;
+	height: 32px;
+	left: unset;
+	right: 16px;
+	width: 32px;
 }
 
 .product-screen__images-main {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    overflow: hidden;
-    min-height: 541px;
+	border-radius: 4px;
+	height: 100%;
+	min-height: 541px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
 }
 
 .product-screen__images-bar {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    height: 133px;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	height: 133px;
 }
 
 .product-screen__images-bar-item {
-    position: relative;
-    flex: 1;
-    height: 100%;
-    border-radius: 4px;
-    overflow: hidden;
+	border-radius: 4px;
+	flex: 1;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
 }
 
 .product-screen__images-carousel {
-    width: 100%;
-    height: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 .react-multi-carousel-track {
-    height: 100%;
-    gap: 8px;
+	gap: 8px;
+	height: 100%;
 }
 
 .react-multi-carousel-item {
-    user-select: none;
-    -webkit-user-drag: none;
-    pointer-events: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+	user-select: none;
 }

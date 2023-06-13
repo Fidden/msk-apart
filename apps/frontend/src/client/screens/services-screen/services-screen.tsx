@@ -7,14 +7,14 @@ import {ServiceScreenBody} from './__body/services-screen__body';
 import {cnServicesScreen} from './services-screen.const';
 
 export const ServicesScreen: FC = () => {
-    return (
-        <PageLayout>
-            <section className={cnServicesScreen()}>
-                <Breadcrumb routes={breadcrumbRoutes}/>
-                <ServiceScreenBody/>
-                <ServicesScreenForm/>
-            </section>
-        </PageLayout>
-    );
+	return (
+		<PageLayout>
+			<section className={cnServicesScreen()}>
+				<Breadcrumb routes={breadcrumbRoutes}/>
+				<ServiceScreenBody/>
+				<ServicesScreenForm/>
+			</section>
+		</PageLayout>
+	);
 };
 

@@ -4,16 +4,16 @@ import {INavRoute} from '~/client/shared/components/footer/__nav/footer__nav';
 import {cnBreadcrumb} from './breadcrumb.const';
 
 interface IBreadcrumbProps {
-    routes: INavRoute[];
+	routes: INavRoute[];
 }
 
 export const Breadcrumb: FC<IBreadcrumbProps> = ({routes}) => (
-    <ul className={cnBreadcrumb()}>
-        {routes.map(route => (
-            <BreadcrumbItem
-                key={route.href}
-                route={route}
-            />
-        ))}
-    </ul>
+	<ul className={cnBreadcrumb()}>
+		{routes.map(route => (
+			<BreadcrumbItem
+				key={route.href}
+				route={route}
+			/>
+		))}
+	</ul>
 );

@@ -8,28 +8,31 @@ import {cnHeader} from '../header.const';
 import './header__controls.css';
 
 export const HeaderControls: FC = () => (
-    <div className={cnHeader('controls')}>
-        <div className={cnHeader('controls-item')}>
-            <Image
-                src={SearchIcon}
-                alt={'search'}
-            />
-        </div>
-        <Link
-            href={'/favorites'}
-            className={cnHeader('controls-item')}
-        >
-            <Image
-                src={HeartIcon}
-                alt={'like'}
-            />
-        </Link>
-        <button className={cnHeader('controls-auth')}>
+	<div className={cnHeader('controls')}>
+		<div className={cnHeader('controls-item')}>
+			<Image
+				src={SearchIcon}
+				alt={'search'}
+			/>
+		</div>
+		<Link
+			href={'/favorites'}
+			className={cnHeader('controls-item')}
+		>
+			<Image
+				src={HeartIcon}
+				alt={'like'}
+			/>
+		</Link>
+		<Link
+			href={'/login'}
+			className={cnHeader('controls-auth')}
+		>
             Войти
-            <Image
-                src={EnterIcon}
-                alt={'enter'}
-            />
-        </button>
-    </div>
+			<Image
+				src={EnterIcon}
+				alt={'enter'}
+			/>
+		</Link>
+	</div>
 );

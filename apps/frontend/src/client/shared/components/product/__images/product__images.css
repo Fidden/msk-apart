@@ -1,23 +1,23 @@
 .product__images {
-    display: flex;
-    flex-direction: row;
-    height: 200px;
-    gap: 8px;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	height: 200px;
 }
 
 .product__images-main {
-    border-radius: 4px;
-    object-fit: cover;
+	border-radius: 4px;
+	object-fit: cover;
 }
 
 .product__images-bar {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    gap: 8px;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 8px;
 }
 
 .product__images-bar-item {
-    border-radius: 4px;
-    object-fit: cover;
+	border-radius: 4px;
+	object-fit: cover;
 }

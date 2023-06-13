@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "stylelint-plugin-bem-style"
+  ],
+  "rules": {
+    "plugin/bem-style": "B__E_M"
+  }
+}

@@ -14,7 +14,7 @@ use Illuminate\Http\Response;
 
 class UserController
 {
-    public function register(UserRegisterRequest $request)
+    public function register(UserRegisterRequest $request): Response|Application|ResponseFactory
     {
         $user = User::create($request->validated());
         if ($user) {
@@ -28,7 +28,7 @@ class UserController
         return ResponseService::error('Something went wrong.', 500);
     }
 
-    public function login(UserLoginRequest $request)
+    public function login(UserLoginRequest $request): Response|Application|ResponseFactory
     {
         if (auth()->attempt($request->validated())) {
             if (!auth()->user()->hasVerifiedEmail()) {

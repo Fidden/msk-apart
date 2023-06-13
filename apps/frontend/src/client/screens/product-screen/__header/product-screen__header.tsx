@@ -5,8 +5,8 @@ import {cnProductScreen} from '../product-screen.const';
 import './product-screen__header.css';
 
 export const ProductScreenHeader: FC = () => (
-    <header className={cnProductScreen('header')}>
-        <ProductScreenImages/>
-        <ProductScreenContent/>
-    </header>
+	<header className={cnProductScreen('header')}>
+		<ProductScreenImages/>
+		<ProductScreenContent/>
+	</header>
 );

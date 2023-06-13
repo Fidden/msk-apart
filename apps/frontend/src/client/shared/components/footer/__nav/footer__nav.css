@@ -1,21 +1,21 @@
 .footer__nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .footer__nav-item {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--black);
-    text-decoration: none;
-    cursor: pointer;
+	color: var(--black);
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 16px;
+	text-decoration: none;
 }
 
 .footer__nav-item a {
-    all: inherit;
+	all: inherit;
 }

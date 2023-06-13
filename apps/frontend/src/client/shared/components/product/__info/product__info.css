@@ -1,24 +1,24 @@
 .product__info {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: var(--black);
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
+	align-items: center;
+	color: var(--black);
+	display: flex;
+	flex-direction: row;
+	font-size: 20px;
+	font-weight: 600;
+	gap: 6px;
+	line-height: 24px;
+	margin: 0;
 }
 
 .product__info-line {
-    background: var(--black);
-    height: 80%;
-    width: 1px;
+	background: var(--black);
+	height: 80%;
+	width: 1px;
 }
 
 .product__info sup {
-    font-size: 12px;
-    line-height: 14px;
-    color: var(--black);
-    margin-left: 2px;
+	color: var(--black);
+	font-size: 12px;
+	line-height: 14px;
+	margin-left: 2px;
 }

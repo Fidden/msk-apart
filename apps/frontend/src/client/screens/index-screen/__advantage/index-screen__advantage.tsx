@@ -10,64 +10,64 @@ import Vikup from './assets/vikup.png';
 import './index-screen__advantage.css';
 
 const advantageBlocks = [
-    {
-        image: Ipoteka,
-        title: 'Подбор ипотеки',
-        description: 'Под любую квартиру'
-    },
-    {
-        image: Vikup,
-        title: 'Срочный выкуп',
-        description: 'Вашей квартиры'
-    },
-    {
-        image: Dolgi,
-        title: 'Продать квартиру с долгами',
-        description: 'Официально'
-    },
-    {
-        image: Nedeli,
-        title: 'Продажа квартиры за 6 недель',
-        description: 'С гарантией'
-    },
-    {
-        image: Ocenka,
-        title: 'Оценка объекта недвижимости',
-        description: 'В Москве и области'
-    },
-    {
-        image: Proverka,
-        title: 'Проверка объекта недвижимости',
-        description: 'Со специалистом'
-    }
+	{
+		image: Ipoteka,
+		title: 'Подбор ипотеки',
+		description: 'Под любую квартиру'
+	},
+	{
+		image: Vikup,
+		title: 'Срочный выкуп',
+		description: 'Вашей квартиры'
+	},
+	{
+		image: Dolgi,
+		title: 'Продать квартиру с долгами',
+		description: 'Официально'
+	},
+	{
+		image: Nedeli,
+		title: 'Продажа квартиры за 6 недель',
+		description: 'С гарантией'
+	},
+	{
+		image: Ocenka,
+		title: 'Оценка объекта недвижимости',
+		description: 'В Москве и области'
+	},
+	{
+		image: Proverka,
+		title: 'Проверка объекта недвижимости',
+		description: 'Со специалистом'
+	}
 ];
 
 export const IndexScreenAdvantage: FC = () => {
-    const renderBlocks = useMemo(() => advantageBlocks.map(block =>
-        <div
-            className={cnIndexScreen('advantage-block')}
-            key={block.title}
-        >
-            <Image
-                className={cnIndexScreen('advantage-block-image')}
-                src={block.image}
-                alt={block.title}
-            />
-            <div className={cnIndexScreen('advantage-block-decimetre')}/>
-            <div className={cnIndexScreen('advantage-block-body')}>
-                <div className={cnIndexScreen('advantage-block-title')}>
-                    {block.title}
-                </div>
-                <div className={cnIndexScreen('advantage-block-description')}>
-                    {block.description}
-                </div>
-            </div>
-        </div>
-    ), []);
+	const renderBlocks = useMemo(() => advantageBlocks.map(block =>
+		<div
+			className={cnIndexScreen('advantage-block')}
+			key={block.title}
+		>
+			<Image
+				className={cnIndexScreen('advantage-block-image')}
+				src={block.image}
+				alt={block.title}
+			/>
+			<div className={cnIndexScreen('advantage-block-decimetre')}/>
+			<div className={cnIndexScreen('advantage-block-body')}>
+				<div className={cnIndexScreen('advantage-block-title')}>
+					{block.title}
+				</div>
+				<div className={cnIndexScreen('advantage-block-description')}>
+					{block.description}
+				</div>
+			</div>
+		</div>
+	), []);
 
-    return (
-        <section className={cnIndexScreen('advantage')}>
-            {renderBlocks}
-        </section>
-    );
+	return (
+		<section className={cnIndexScreen('advantage')}>
+			{renderBlocks}
+		</section>
+	);
 };

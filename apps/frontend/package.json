@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint && npx stylelint \"**/*.css\"",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook"
   },
@@ -42,7 +42,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.2",
-    "react-query": "^3.39.3",
     "typescript": "4.9.4",
     "zustand": "^4.3.3"
   },
@@ -67,7 +66,11 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "path-to-regexp": "^6.2.1",
+    "postcss-bem-linter": "^3.3.0",
+    "postcss-reporter": "^7.0.5",
     "storybook-addon-next": "^1.7.1",
+    "stylelint-plugin-bem-style": "^1.0.3",
+    "stylelint-selector-bem-pattern": "^2.1.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "webpack": "^5.75.0"
   }

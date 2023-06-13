@@ -1,21 +1,21 @@
 .catalog-screen {
-    display: flex;
-    flex-direction: row;
-    gap: 23px;
+	display: flex;
+	flex-direction: row;
+	gap: 23px;
 }
 
 .catalog-screen__filter {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 214px;
-    width: 100%;
-    flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 16px;
+	max-width: 214px;
+	width: 100%;
 }
 
 .catalog-screen__content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	width: 100%;
 }

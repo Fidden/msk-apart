@@ -1,23 +1,23 @@
 .breadcrumb__item {
-    gap: 8px;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    color: #999999;
+	align-items: center;
+	color: #999;
+	display: flex;
+	font-size: 12px;
+	font-weight: 500;
+	gap: 8px;
+	line-height: 16px;
 }
 
 .breadcrumb__item a {
-    all: inherit;
-    cursor: pointer;
+	all: inherit;
+	cursor: pointer;
 }
 
 .breadcrumb__item:last-child .breadcrumb__item-icon {
-    display: none;
+	display: none;
 }
 
 .breadcrumb__item:last-child a {
-    pointer-events: none;
-    cursor: default;
+	cursor: default;
+	pointer-events: none;
 }

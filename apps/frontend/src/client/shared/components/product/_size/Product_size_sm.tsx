@@ -4,11 +4,11 @@ import {cnProduct} from '../product.const';
 import './product_size_sm.css';
 
 interface IProductSizeSmallProps {
-    size?: 'sm';
+	size?: 'sm';
 }
 
 export const withProductSizeSmall = withBemMod<IProductSizeSmallProps, IProductProps>(
-    cnProduct(),
-    {size: 'sm'},
-    (Product) => (props) => <Product {...props}/>
+	cnProduct(),
+	{size: 'sm'},
+	(Product) => (props) => <Product {...props}/>
 );

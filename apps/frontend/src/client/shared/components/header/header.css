@@ -1,17 +1,17 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    padding: 16px;
-    margin: 8px 0;
-    background: rgba(255, 255, 255, 0.41);
-    backdrop-filter: blur(17.5px);
-    position: fixed;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, 0);
-    max-width: var(--xl);
-    border-radius: 4px;
-    z-index: 1000;
+	align-items: center;
+	backdrop-filter: blur(17.5px);
+	background: rgba(255, 255, 255, 0.41);
+	border-radius: 4px;
+	display: flex;
+	flex-direction: row;
+	left: 50%;
+	margin: 8px 0;
+	max-width: var(--xl);
+	padding: 16px;
+	position: fixed;
+	top: 0;
+	transform: translate(-50%, 0);
+	width: 100%;
+	z-index: 1000;
 }

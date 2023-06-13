@@ -7,28 +7,28 @@ import {Label} from '~/client/shared/components/label/label';
 import {PageLayout} from '~/client/shared/layouts/page-layout/page-layout';
 
 export const ForgotPasswordScreen: FC = () => {
-    const router = useRouter();
+	const router = useRouter();
 
-    return (
-        <PageLayout>
-            <AuthContainer
-                title={'Забыли пароль?'}
-                subtitle={'Мы вышлем код Вам на почту'}
-                button={{
-                    text: 'Вход',
-                    onClick: () => router.push('/login')
-                }}
-            >
-                <Label text={'Почта'}>
-                    <Input
-                        type={'email'}
-                        placeholder={'Введите почту'}
-                    />
-                </Label>
-                <Button>
-                    Получить код
-                </Button>
-            </AuthContainer>
-        </PageLayout>
-    );
+	return (
+		<PageLayout>
+			<AuthContainer
+				title={'Забыли пароль?'}
+				subtitle={'Мы вышлем код Вам на почту'}
+				button={{
+					text: 'Вход',
+					onClick: () => router.push('/login')
+				}}
+			>
+				<Label text={'Почта'}>
+					<Input
+						type={'email'}
+						placeholder={'Введите почту'}
+					/>
+				</Label>
+				<Button>
+					Получить код
+				</Button>
+			</AuthContainer>
+		</PageLayout>
+	);
 };
