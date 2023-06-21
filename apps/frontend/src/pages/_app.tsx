@@ -4,7 +4,7 @@ import NextNProgress from 'nextjs-progressbar';
 import '~/global/styles/globals.css';
 
 export const axiosInstance = axios.create({
-	baseURL: process.env.API_URL,
+	baseURL: 'https://animezero.ru/api',
 	headers: {
 		'Content-Type': 'application/json',
 		Accept: 'application/json'

@@ -10,3 +10,8 @@
 	font-weight: 500;
 	line-height: 16px;
 }
+
+.label__error {
+	color: red;
+	font-size: 12px;
+}

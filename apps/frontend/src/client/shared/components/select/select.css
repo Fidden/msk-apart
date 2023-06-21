@@ -1,10 +1,12 @@
 .select {
 	position: relative;
+	width: 100%;
 }
 
 .select__button {
 	align-items: center;
 	background: none;
+	width: 100%;
 	border: 1px solid #eaeaea;
 	border-radius: 4px;
 	color: var(--black);
@@ -37,8 +39,21 @@
 	line-height: 16px;
 	list-style-type: none;
 	margin: 0;
-	padding: 8px;
+	padding: 8px 4px;
 	position: absolute;
 	transform: translateY(calc(100% + 6px));
-	width: 100%;
+	width: -webkit-fill-available;
+	z-index: 100000;
+}
+
+.select__option {
+	padding: 4px;
+	transition: 0.2s;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.select__option:hover {
+	transition: 0.2s;
+	background: rgba(27, 27, 27, 0.2);
 }

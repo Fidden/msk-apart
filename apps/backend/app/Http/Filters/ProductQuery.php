@@ -36,4 +36,11 @@ class ProductQuery extends QueryFilter
             $builder->whereBetween('value', $area);
         });
     }
+
+    public function room(int $room)
+    {
+        return $this->builder->whereHas('rooms', function (Builder $builder) use ($room) {
+            $builder->where('value', $room);
+        });
+    }
 }

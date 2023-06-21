@@ -17,10 +17,11 @@ class ProductIndexRequest extends FormRequest
             'price' => 'string',
             'address' => 'string',
             'area' => 'string',
+            'room' => 'integer'
         ];
     }
 
-    private function transformToArray(string $key, string $separator = ',')
+    private function transformToArray(string $key, string $separator = ','): void
     {
         if ($this->has($key)) {
             $this->merge([
@@ -29,7 +30,7 @@ class ProductIndexRequest extends FormRequest
         }
     }
 
-    public function passedValidation()
+    public function passedValidation(): void
     {
         $this->transformToArray('price');
         $this->transformToArray('area');

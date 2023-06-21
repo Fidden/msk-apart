@@ -24,7 +24,7 @@ class Product extends Model
             ->whereHas('rooms')
             ->whereHas('floorTotal')
             ->whereHas('floorCurrent')
-            ->whereHas('area')
+            ->whereHas('area', fn($query) => $query->whereNot('value', '0.00'))
             ->whereHas('subwayName')
             ->whereHas('subwayWalkTime');
     }

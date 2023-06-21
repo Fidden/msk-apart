@@ -1,14 +1,15 @@
-import {FC, HTMLInputTypeAttribute} from 'react';
+import {ChangeEvent, FC, HTMLAttributes, HTMLInputTypeAttribute} from 'react';
 import {cnDoubleInput} from './double-input.const';
 
-type InputType = {
-	placeholder: string;
-	type: HTMLInputTypeAttribute;
+interface InputType extends Omit<HTMLAttributes<HTMLButtonElement>, 'onChange'> {
+    placeholder: string;
+    type: HTMLInputTypeAttribute;
+    onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface IDoubleInputProps {
-	first: InputType;
-	second: InputType;
+    first: InputType;
+    second: InputType;
 }
 
 export const DoubleInput: FC<IDoubleInputProps> = ({first, second}) => {

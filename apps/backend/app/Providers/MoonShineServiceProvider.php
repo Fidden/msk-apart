@@ -35,7 +35,6 @@ class MoonShineServiceProvider extends ServiceProvider
             MenuItem::make('Тип недвижимости', new StockTypeResource()),
             MenuItem::make('Поля типа недвижимости', new StockFieldResource()),
             MenuItem::make('Варианты полей', new StockFieldVariantResource()),
-
         ]);
     }
 }

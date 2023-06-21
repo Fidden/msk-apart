@@ -7,22 +7,24 @@ import {IValidation} from '~/client/shared/types/validation';
 import {axiosInstance} from '~/pages/_app';
 
 export interface IRegister {
-	name: string;
-	lastname: string;
-	patronymic: string;
-	email: string;
-	phone: string;
-	password: string;
+    name: string;
+    lastname: string;
+    patronymic: string;
+    email: string;
+    phone: string;
+    password: string;
 }
 
 export interface ILogin {
-	login: string;
-	password: string;
+    login: string;
+    password: string;
 }
 
 interface State {
-	register: (data: IRegister) => Promise<IToken | IValidation | undefined>;
-	login: (data: ILogin) => Promise<IToken | IValidation | undefined>;
+    register: (data: IRegister) => Promise<IToken | IValidation | undefined>;
+    login: (data: ILogin) => Promise<IToken | IValidation | undefined>;
+    setToken: (token: string) => void;
+    token?: string;
 }
 
 export const useUserStore = create<State>()(immer(devtools(set => ({
@@ -45,5 +47,9 @@ export const useUserStore = create<State>()(immer(devtools(set => ({
 				return e.response?.data as IValidation;
 			}
 		}
-	}
+	},
+	setToken: (token: string) => {
+		localStorage.setItem('token', token);
+	},
+	token: typeof window !== 'undefined' ? '' : (localStorage.getItem('token') || '')
 }))));

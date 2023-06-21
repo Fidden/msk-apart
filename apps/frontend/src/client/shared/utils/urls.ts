@@ -4,5 +4,6 @@ export const urls = {
 	product: new Url('/product/:id'),
 	productInfo: new Url('/info'),
 	special: new Url('/special'),
-	catalog: new Url('/product')
+	catalog: new Url('/product'),
+	user: new Url('/user')
 };

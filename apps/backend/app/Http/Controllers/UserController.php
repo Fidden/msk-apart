@@ -30,7 +30,10 @@ class UserController
 
     public function login(UserLoginRequest $request): Response|Application|ResponseFactory
     {
-        if (auth()->attempt($request->validated())) {
+        if (auth()->attempt([
+            'email' => $request->login,
+            'password' => $request->password
+        ])) {
             if (!auth()->user()->hasVerifiedEmail()) {
                 return ResponseService::error('Please verify your email.', 403, [
                     'token' => UserTokenService::generate(),

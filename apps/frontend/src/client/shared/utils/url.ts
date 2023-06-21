@@ -22,7 +22,7 @@ export class Url<Params extends Record<string, string>, Query extends Record<str
 		return axiosInstance<T>(path, {
 			...options,
 			params: pathQuery,
-			baseURL: 'http://127.0.0.1:8000/api'
+			baseURL: 'https://animezero.ru/api'
 		});
 	}
 }

@@ -7,18 +7,22 @@ import {IProductFilter} from '~/client/shared/types/product-filter';
 import {urls} from '~/client/shared/utils/urls';
 
 interface State {
-	products?: IPagination<IProduct>;
-	filters?: IProductFilter;
-	fetch: (page: number) => Promise<IPagination<IProduct>>;
-	set: (products: IPagination<IProduct>) => void;
-	append: (products: IPagination<IProduct>) => void;
+    products?: IPagination<IProduct>;
+    filters?: IProductFilter;
+    fetch: (page: number, type?: number, price?: string, area?: string, room?: number) => Promise<IPagination<IProduct>>;
+    set: (products: IPagination<IProduct>) => void;
+    append: (products: IPagination<IProduct>) => void;
 }
 
 export const useCatalogStore = create<State>()(immer(devtools(set => ({
 	products: undefined,
-	fetch: async (page: number) => {
+	fetch: async (page: number, type?: number, price?: string, area?: string, room?: number) => {
 		const res = await urls.catalog.build<IPagination<IProduct>>(undefined, {
-			page
+			page,
+			type,
+			price,
+			area,
+			room
 		});
 		return res.data;
 	},

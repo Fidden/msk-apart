@@ -7,24 +7,30 @@ use App\Http\Requests\Product\ProductIndexRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product\Product;
 use App\Services\ResponseService;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProductController
 {
-    public function index(ProductIndexRequest $request)
+    /**
+     * @param ProductIndexRequest $request
+     * @return AnonymousResourceCollection
+     */
+    public function index(ProductIndexRequest $request): AnonymousResourceCollection
     {
         return ProductResource::collection(
-            Product::filter(
+            Product::query()->valid()->filter(
                 ProductQuery::make(
                     $request->only(
                         'type',
                         'name',
                         'price',
                         'address',
-                        'area'
+                        'area',
+                        'room'
                     )
                 )
-            )->valid()->paginate()
+            )->paginate()
         );
     }
 

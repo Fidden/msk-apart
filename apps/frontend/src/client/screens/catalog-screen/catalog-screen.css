@@ -9,7 +9,15 @@
 	flex-direction: column;
 	flex-shrink: 0;
 	gap: 16px;
-	max-width: 214px;
+	max-width: 254px;
+	width: 100%;
+}
+
+.catalog-screen__filter-content {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	gap: 4px;
 	width: 100%;
 }
 
