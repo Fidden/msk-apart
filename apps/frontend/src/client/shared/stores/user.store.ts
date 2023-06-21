@@ -49,7 +49,9 @@ export const useUserStore = create<State>()(immer(devtools(set => ({
 		}
 	},
 	setToken: (token: string) => {
-		localStorage.setItem('token', token);
+		if (typeof window !== 'undefined') {
+			localStorage.setItem('token', token);
+		}
 	},
-	token: typeof window !== 'undefined' ? '' : (localStorage.getItem('token') || '')
+	token: typeof window === 'undefined' ? '' : (localStorage.getItem('token') || '')
 }))));
